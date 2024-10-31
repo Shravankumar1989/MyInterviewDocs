@@ -1,0 +1,35 @@
+AWS
+--------------
+import boto3
+
+Git
+--------------
+from git import Repo
+
+Jenkins
+--------------
+import jenkins
+
+Jira
+--------------
+from jira import JIRA
+
+Confluence
+--------------
+from atlassian import Confluence
+
+Docker
+--------------
+import docker
+
+Kubernetes
+--------------
+from kubernetes import client, config
+
+Ansible
+--------------
+import ansible_runner
+
+Terraform
+--------------
+from python_terraform import Terraform

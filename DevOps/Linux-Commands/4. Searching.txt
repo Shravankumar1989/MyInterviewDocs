@@ -1,0 +1,7 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Searching
+---------
+    1. grep <pattern> <file>: Search for a pattern in a file.
+    2. find <directory> -name <filename>: Search for files and directories.
+    3. locate <filename>: Find the location of files (uses a database).    

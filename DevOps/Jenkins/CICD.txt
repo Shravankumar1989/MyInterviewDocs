@@ -1,0 +1,17 @@
+JenkinsFile Steps:
+1.  A developer makes a code commit into a GitHub repository.
+2.  A Git webhook triggers a Jenkins pipeline.
+3.  In the first stage of the Jenkins pipeline, we will check out the code.
+4.  Perform a build using Maven.
+        mvn clean install
+5.  Perform unit testing using Maven.
+        mvn test
+6.  Perform static code analysis using SonarQube.
+7.  Check SonarQube Quality Gate
+8.  Upload the artifacts into JFrog Artifactory.
+9.  Build a Docker image.
+10. Scan the Docker image for security vulnerabilities.
+11. Push the Docker image to the AWS ECS registry.
+12. Update the new image in the Kubernetes manifest file and push it to a different GitHub repository.
+13. We have a GitOps tool called ArgoCD, which watches the GitHub repository, 
+    picks up the new commit, and deploys it into the Kubernetes cluster.

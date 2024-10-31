@@ -1,0 +1,22 @@
+1. Embedded SRE
+----------------
+    1.1 What it is: 
+        An SRE engineer working closely with a specific product 
+        or development team to build reliability into their software.
+
+    1.2 Why it’s helpful: 
+        Instead of a centralized SRE team supporting multiple services, 
+        embedded SREs integrate directly with development teams to offer expertise and automate processes early.
+
+    1.3 Example:
+        An SRE assigned to a payment service team ensures that proper monitoring 
+        and alerting are set up from the start, reducing operational issues later.
+
+    1.4 Goal: 
+        To bake reliability into the product development process from the beginning.
+
+
+Summary:
+----------------
+Embedded SRE: 
+    SREs directly work with product teams to build reliability from the start.

@@ -1,0 +1,4 @@
+1.  what is DynamoDB?
+---------------------
+DynamoDB is a fully Managed NoSQL database service
+that delivers reliable performance on low-latency queries

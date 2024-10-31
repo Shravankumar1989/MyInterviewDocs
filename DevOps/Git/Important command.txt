@@ -1,0 +1,26 @@
+revert your added file in git
+---------------------------------------
+git reset --mixed
+
+
+Stash - add file in to temproray memeory 
+---------------------------------------
+git stash
+git checkout otherbranch
+
+revert back all changes file
+---------------------------------------
+git stash pop
+
+How do you view the commit history in Git ?
+---------------------------------------
+git log
+git log --oneline
+
+How can you fix a broken  or rename commit in Git ?
+---------------------------------------
+git commit --amend
+
+How do you find a list of files that have changed in a particular commit ?
+---------------------------------------
+git diff-tree -r <commitId>

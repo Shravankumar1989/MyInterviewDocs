@@ -1,0 +1,7 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+SSH (Secure Shell)
+------------------
+    1. ssh <user>@<host>: Connect to a remote host via SSH.
+    2. scp <source> <destination>: Secure copy files over SSH.
+    3. rsync -av <source> <destination>: Sync files between local and remote systems.

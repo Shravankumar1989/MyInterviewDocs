@@ -1,0 +1,4 @@
+1.  What is the Lambda?
+-----------------------
+    AWS Lambda is a serverless Computing service that allows 
+    users to run code without provisioning or managing servers.

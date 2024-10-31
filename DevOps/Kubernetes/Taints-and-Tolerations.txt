@@ -1,0 +1,61 @@
+1.  what is Taint and Toleration?
+---------------------------------
+    which pods can be scheduled on which nodes.
+
+    rememeber:
+    ----------
+    Taint - For Node Level
+    Toleration - For Pod Level
+
+2.  Common Effects for Taints
+-----------------------------
+    2.1 NoSchedule: 
+        Prevents pods from being scheduled unless they tolerate the taint.
+
+    2.2 PreferNoSchedule: 
+        Scheduler tries to avoid placing pods on this node but will if necessary.
+        or 
+        which means the system will try to avoid placing a pod on the node,
+        but that is not guaranteed
+
+    2.3 NoExecute: 
+        Existing pods that do not tolerate the taint are evicted, and new pods are not scheduled.
+
+3. Commands for Taint and Toleration?
+-------------------------------------
+    3.1     Apply Taint to a Node
+            kubectl taint nodes <node-name> <key>=<value>:<effect>
+
+            example:-
+            kubectl taint nodes node1 app=blue:NoSchedule
+    
+    3.2     Remove Taint from a Node
+            To remove a taint from a node, use a hyphen (-) at the end of the taint specification:
+            kubectl taint nodes <node-name> <key>:<effect>-
+
+            example:-
+            kubectl taint nodes node1 app:NoSchedule-
+    
+    3.3     List Taints on a Node
+            kubectl describe node <node-name>
+
+            example:-
+            kubectl describe node node1
+
+    3.4     Add Toleration to a Pod
+
+            example:-
+
+            apiVersion: v1
+            kind: Pod
+            metadata:
+              name: mypod
+            spec:
+              containers:
+              - name: nginx
+                image: nginx
+              tolerations:
+              - key: "app"
+                operator: "Equal"
+                value: "blue"
+                effect: "NoSchedule"

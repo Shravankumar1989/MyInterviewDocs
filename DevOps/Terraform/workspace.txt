@@ -1,0 +1,41 @@
+1.  create a new Terraform workspace
+    terraform workspace new dev
+
+2.  Create one more workspace with name test
+    terraform workspace new test
+
+3.  How to List all the Terraform workspaces?
+    terraform workspace list
+
+4.  How to Show Terraform workspaces?
+    terraform workspace show
+
+5.  How to switch Terraform workspaces?
+    terraform workspace select dev
+
+6.  How to use the name of Current Workspace using ${terraform.workspace} Interpolation?
+
+    locals {
+        instance_name = "${terraform.workspace}-instance" 
+    }
+
+    resource "aws_instance" "ec2_example" {
+        ami = "ami-0767046d1677be5a0" 
+        instance_type = var.instance_type
+        tags = {
+        Name = local.instance_name
+        }
+    }
+
+7.  How to delete Terraform workspaces?
+    terraform workspace delete dev
+
+8.  Handling Variables Across Workspaces
+    1.  terraform workspace select dev
+            terraform plan -var-file="dev.tfvars"
+            terraform apply -var-file="dev.tfvars"
+            terraform destroy -var-file="dev.tfvars"
+    2.  terraform workspace select test
+            terraform plan -var-file="test.tfvars"
+            terraform apply -var-file="test.tfvars"
+            terraform destroy -var-file="test.tfvars"

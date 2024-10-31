@@ -1,0 +1,198 @@
+what is Jenkins?
+----------------
+1. Jenkins is an open-source automation server widely used for
+    continuous integration (CI) and continuous delivery (CD) in software development.
+2. It will run on 8080 Port
+3. Latest Version: 2.462.1
+
+Key Features of Jenkins:
+------------------------
+1. Continuous Integration (CI):
+2. Continuous Delivery (CD):
+3. Plugins:
+4. Pipelines:
+5. User Interface:
+6. Notifications:
+
+Typical Use Cases:
+------------------
+1. Automated Builds: Jenkins automatically builds the project when changes are detected in the version control system.
+2. Automated Testing: Jenkins runs automated tests every time new code is committed, ensuring that the code is stable and functional.
+3. Automated Deployments: Jenkins can deploy the application to different environments (e.g., development, staging, production) automatically,
+    based on the build and test results.
+4. Monitoring and Reporting: Jenkins provides real-time monitoring and reports on the status of builds, tests, and deployments.
+
+
+what is the prerequisite for install Jenkins software?
+------------------------------------------------------
+1. Java Development Kit (JDK):
+2. Operating System:
+3. Hardware Requirements:
+4. Web Browser:
+5. Network Requirements:
+
+what is the Manage Jenkins?
+----------------------------
+1. Configure System: (Configure Server)
+Description: This section allows you to configure global Jenkins settings, including paths for tools,
+locations for various configurations, and general system settings that apply to the entire Jenkins instance.
+
+2. Global Tool Configuration: (Configure Tool)
+Description: In this section, you can configure the locations and automatic installers for tools like JDK, Maven, Git, etc., 
+which Jenkins uses during the build processes.
+
+3. Manage Plugins:(Add or Install, Update, Remove Plugins)
+Description: This feature allows you to manage the plugins installed on Jenkins. You can add new plugins, update existing ones,
+remove unnecessary plugins, or disable them as needed to extend Jenkins' functionality.
+
+4. Manage Nodes and Clouds: (Manage Master and Slave Node)
+Description: This section is used to manage Jenkins nodes (agents) and cloud settings.
+You can add, remove, control, and monitor the nodes where Jenkins jobs are executed.
+
+5. Configure Global Security
+Description: In this section, you can secure your Jenkins instance by configuring global security settings,
+such as authentication, authorization, and access control. This includes setting up user roles, permissions, and access restrictions.
+
+6. Credentials: (Manage Credentials)
+Description: This feature allows you to manage credentials that Jenkins uses to access various systems and tools securely.
+You can add, update, and remove credentials here.
+
+7. Credential Providers
+Description: This section is used to configure the credential providers and types.
+Credential providers are responsible for managing the credentials and making them available to Jenkins jobs.
+
+8. Manage Users
+Description: The "Manage Users" section in Jenkins allows administrators to manage user accounts within the Jenkins environment.
+Here, you can perform various tasks related to user management, including:
+    8.1 Creating New Users: You can add new user accounts to Jenkins, specifying usernames, passwords, and other details.
+    8.2 Updating User Information: Modify existing user accounts, such as changing passwords, updating email addresses,
+        or editing other personal details.
+    8.3 Deleting Users: Remove user accounts that are no longer needed, ensuring that only authorized personnel have access to Jenkins.
+    8.4 Assigning Roles and Permissions: Depending on your security configuration, you can assign specific roles and permissions to users,
+        defining what actions they are allowed to perform within Jenkins.
+    8.5 Managing User Groups (if applicable): In some configurations, you can also manage groups of users, assigning collective permissions
+        and roles.
+
+
+what are the types job in Jenkins?
+----------------------------------
+1. Freestyle Project
+    1.1 Description: The Freestyle project is the most basic and flexible type of Jenkins job. 
+        It allows you to define build steps, configure version control, and set up post-build actions. 
+        Freestyle projects are suitable for simple automation tasks or straightforward CI/CD pipelines.
+    1.2 Use Cases: Basic build jobs, executing shell scripts, triggering other projects, etc.
+
+2. Pipeline
+    2.1 Description: A Pipeline project allows you to define your entire build process as code,using a domain-specific language (DSL) based on Groovy. 
+        Jenkins Pipeline jobs can be either Declarative or Scripted. 
+        Pipelines are ideal for complex workflows and CI/CD pipelines, as they offer more control and flexibility than Freestyle projects.
+    2.2 Use Cases: CI/CD pipelines, complex automation workflows, multi-branch pipelines.
+
+3. Multiconfiguration Project (Matrix Project)
+    3.1 Description: The Multiconfiguration project, also known as a Matrix project, allows you to run the same set of build steps
+        in different configurations, such as multiple environments, operating systems, or tool versions. This is useful for testing
+        a codebase across different configurations.
+    3.2 Use Cases: Cross-platform builds, testing in multiple environments, running builds with various parameters.
+
+4. Folder
+    4.1 Description: A Folder job type is not a build job itself but allows you to organize jobs into a hierarchy.
+        You can use folders to group related jobs together, making it easier to manage a large number of projects within Jenkins.   
+    4.2 Use Cases: Organizing jobs by team, project, or application.
+
+5. Multibranch Pipeline
+    5.1 Description: The Multibranch Pipeline job is designed to handle multiple branches in a repository automatically. 
+        Jenkins will scan your version control system (like Git) for branches, and automatically create corresponding Pipeline jobs for each branch.
+        This type of job is particularly useful for projects with multiple branches, like feature branches or release branches.
+    5.2 Use Cases: Managing builds across multiple branches, handling branch-specific pipelines.
+
+6. Organization Folder
+
+
+Types of trigger in Jenkins?
+----------------------------
+1. Build Periodically
+    Description: Build periodically if mention specific crontab specific whether changes is there or not doesn't matter jenkins run the pipeline.
+    1.1 IMP: whether changes is there or not doesn't matter jenkins run the pipeline.
+    1.2 Time-based, using a cron-like syntax to specify when the job should run (e.g., every hour, daily at midnight).
+    1.3 example: H/5 * * * * (this is execute every five minutes always)
+2. pollSCM
+    Description: pollSCM if mention specific crontab specific if changes is there in code then only jenkins run the pipeline.
+    2.1 IMP: if changes is there in code then only jenkins run the pipeline.
+    2.2 Time-based, using a cron-like syntax to specify when the job should run (e.g., every hour, daily at midnight).
+    2.3 example: H/5 * * * * (this is execute every five minutes always)
+3. webhook
+    Description: when somebody changes done in particular repository webhook trigger the Jenkins pipeline.
+    Process:
+    1. Jenkins Side
+        1.1 Select -> Jenkins job
+        1.2 Select -> Configure
+        1.3 Choose Build Triggers -> GitHub hook trigger for GITScm polling
+        1.4 Click on Save and apply
+    
+    2. In Github Side
+        2.1 Select your repository
+        2.2 go to - Settings
+        2.3 Select - webhook(in Left Side)
+        2.4 Add webhook
+        2.5 Add Payload URL - example(http://43.204.227.191:8080/github-webhook/) or (Jenkins URL/github-webhook/)
+        2.6 Content Type - Choose -> application/json
+        2.7 Select -> Just the push event
+        2.8 Checked -> Active
+        2.9 Click on Add webhook
+
+How to configure worker or slave in Jenkins?
+URL: https://www.coachdevops.com/2022/08/jenkins-build-agent-setup-using-docker.html
+YouTube Reference: https://www.youtube.com/watch?v=kHJGYTcLNj0
+
+Jenkins Pipeline Step by Steps:
+-------------------------------
+1.  A developer makes a code commit into a GitHub repository.
+2.  A Git webhook triggers a Jenkins pipeline.
+3.  In the first stage of the Jenkins pipeline, we will check out the code.
+4.  Perform a build using Maven.
+        mvn clean install
+5.  Perform unit testing using Maven.
+        mvn test
+6.  Perform static code analysis using SonarQube.
+7.  Check SonarQube Quality Gate
+8.  Upload the artifacts into JFrog Artifactory.
+9.  Build a Docker image.
+10. Scan the Docker image for security vulnerabilities.
+11. Push the Docker image to the AWS ECS registry.
+12. Update the new image in the Kubernetes manifest file and push it to a different GitHub repository.
+13. We have a GitOps tool called ArgoCD, which watches the GitHub repository, 
+    picks up the new commit, and deploys it into the Kubernetes cluster.
+
+
+What is by default Folder or PATH in Jenkins?
+1.  Linux:
+    /var/lib/jenkins/
+2. Windows
+    C:\Program Files (x86)\Jenkins
+    C:\ProgramData\Jenkins
+
+and You can store it in Variable : JENKINS_HOME
+
+What is by default Folder or PATH in JAVA?
+-------------------------------------------
+1.  Linux:
+    /usr/lib/jvm/
+
+    OpenJDK via apt (Debian/Ubuntu):
+    /usr/lib/jvm/java-<version>-openjdk-amd64/
+
+    Oracle JDK: If you manually install Oracle Java, it’s typically located in:
+    /usr/java/
+
+2. Windows
+    64-bit Java: C:\Program Files\Java\
+    32-bit Java: C:\Program Files (x86)\Java\
+
+and You can store it in Variable : JAVA_HOME
+
+How to backup for Jenkins?
+--------------------------
+1.  ThinBackup Plugin that helps automate the backup process.
+2.  Manual Backup
+    tar -cvzf jenkins_backup.tar.gz /var/lib/jenkins/
+

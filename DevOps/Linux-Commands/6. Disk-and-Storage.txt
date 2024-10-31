@@ -1,0 +1,8 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Disk and Storage
+----------------
+    1. df -h: Display disk space usage in a human-readable format.
+    2. du -sh <directory>: Show disk usage of a specific directory.
+    3. mount <device> <directory>: Mount a file system.
+    4. umount <device>: Unmount a file system.

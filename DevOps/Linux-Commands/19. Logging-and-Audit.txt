@@ -1,0 +1,6 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Logging and Audit
+-----------------
+    1. tail -f /var/log/syslog: Continuously watch the syslog file.
+    2. journalctl -xe: Show the systemd log.

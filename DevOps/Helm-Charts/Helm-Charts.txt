@@ -1,0 +1,89 @@
+What is Helm Charts?
+Package manager for your kuberntes cluster
+
+HelmCharts Commands
+
+1. Verify the Installation
+helm version
+
+2. Create your first Helm Chart
+helm create helloworld
+
+3. tree helloworld 
+helloworld
+├── charts
+├── Chart.yaml
+├── templates
+│  ├── deployment.yaml
+│  ├── _helpers.tpl
+│  ├── hpa.yaml
+│  ├── ingress.yaml
+│  ├── NOTES.txt
+│  ├── serviceaccount.yaml
+│  ├── service.yaml
+│  └── tests
+│      └── test-connection.yaml
+└── values.yaml
+
+3. Install the Helm Chart using command
+helm install <release-name> <chart-name>
+helm install myhelloworld helloworld
+
+4. Verify the helm install command
+helm list -a
+
+5. Helm: Adding upstream repositories
+helm install redis bitnami/redis
+    
+    5.1 How to ADD upstream Helm chart repository
+        5.1.1 add : Add chart repository
+        5.1.2 list : List chart repository
+        5.1.3 update : Update the chart information locally
+        5.1.4 index : For generating the index file
+        5.1.5 remove : Remove chart repository
+
+        5.1.1 add : Add chart repository
+              helm repo add bitnami https://charts.bitnami.com/bitnami
+              helm search repo bitnami
+
+        5.1.2 list : List chart repository
+              helm repo list
+        
+        5.1.3 update : Update the chart information locally
+              helm repo update
+
+        5.1.4 index : For generating the index file
+              helm repo index helloworld
+
+        5.1.5 remove : Remove chart repository
+              helm repo remove bitnami
+
+6. Run Helm template Springboot
+helm template helloworld #it will show all the template is created in template folder
+
+7. lint command - find issue helm chart
+helm lint helloworld
+
+8. Helm --debug --dry-run - used find the issue with helm chart configuration
+helm install myhelloworld --debug --dry-run helloworld
+
+9. helm upgrade 
+helm upgrade <release-name>
+helm upgrade myhelloworld
+
+10. helm history for roll-Back
+helm history <release_name>
+helm history myhelloworld
+
+REVISION    UPDATED                     STATUS          CHART           APP VERSION     DESCRIPTION
+1           Mon Sep  4 10:00:00 2024    deployed        my-chart-1.0.0  1.0.0           Install complete
+2           Tue Sep  5 12:00:00 2024    superseded      my-chart-1.1.0  1.1.0           Upgrade complete
+3           Wed Sep  6 14:00:00 2024    deployed        my-chart-1.2.0  1.2.0           Upgrade complete
+
+11. rollback helm release
+helm rollback myhelloworld 2
+
+
+12. Delete the helm release
+helm delete <release_name>
+helm delete myhelloworld

@@ -1,0 +1,96 @@
+Refrence - https://github.com/iam-veeramalla/observability-zero-to-hero/tree/main/day-1
+
+1.  what is a Observability
+---------------------------
+    Observability is the ability to understand the internal state of a system by analyzing the data it produce.
+    
+    Observability is including 
+    --------------------------
+        1.1 Monitoring(Metrics): Monitoring tells us what is happening.
+        1.2 Logging(Logs): Logging explains why it is happening.
+        1.3 Tracing(Traces): Tracing shows how it is happening.
+
+        1.1 Monitoring(Metrics): 
+            
+            involves tracking system metrics like
+                -   CPU usage, 
+                -   memory usage, and 
+                -   network performance. 
+            
+            Provides alerts based on predefined thresholds and conditions
+        
+        1.2 Logging(Logs): 
+            involves the collection of log data from various components of a system.
+        
+        1.3 Tracing(Traces): 
+            involves tracking the flow of a request or transaction as it moves through different
+            services and components within a system.
+
+2.  Why Monitoring?
+-------------------
+    2.1 Monitoring helps us keep an eye on our systems to ensure they are working properly.
+
+    2.2 Perpose: maintaining the health, performance, and security of IT environments.
+
+    2.3 It enables early detection of issues, ensuring that they can be addressed before causing 
+        significant downtime or data loss.
+
+    2.4 We use monitoring to:
+        2.4.1   Detect Problems Early:
+        
+        2.4.2   Measure Performance:
+        
+        2.4.3   Ensure Availability:
+    
+3. Why Observability?
+---------------------
+    3.1 Observability helps us understand why our systems are behaving the way they are.
+    
+    3.2 It’s like having a detailed map and tools to explore and diagnose issues.
+    
+    3.3 We use observability to:
+        
+        3.3.1   Diagnose Issues:
+        
+        3.3.2   Understand Behavior:
+        
+        3.3.3   Improve Systems:
+
+4.  Does Observability Cover Monitoring?
+-----------------------------------------
+    4.1 Yes!! Monitoring is subset of Observability
+    
+    4.2 Observability is a broader concept that includes monitoring as one of its components.
+    
+    4.3 monitoring focuses on tracking specific metrics and alerting on predefined conditions
+    
+    4.4 observability provides a comprehensive understanding of the system by collecting and 
+        analyzing a wider range of data, including logs, metrics, and traces.
+
+5.  What Can Be Monitored?
+--------------------------
+    5.1 Infrastructure: CPU usage, memory usage, disk I/O, network traffic.
+    
+    5.2 Applications: Response times, error rates, throughput.
+    
+    5.3 Databases: Query performance, connection pool usage, transaction rates.
+    
+    5.4 Network: Latency, packet loss, bandwidth usage.
+    
+    5.5 Security: Unauthorized access attempts, vulnerability scans, firewall logs.
+
+6.  What Can Be Observed?
+-------------------------
+    6.1 Logs: Detailed records of events and transactions within the system.
+    
+    6.2 Metrics: Quantitative data points like CPU load, memory consumption, and request counts.
+    
+    6.3 Traces: Data that shows the flow of requests through various services and components.
+
+7.  What are the Tools Available?
+---------------------------------
+    7.1 Monitoring Tools: Prometheus, Grafana, Nagios, Zabbix, PRTG.
+
+    7.2 Observability Tools: ELK Stack (Elasticsearch, Logstash, Kibana), 
+        EFK Stack (Elasticsearch, FluentBit, Kibana) Splunk, Jaeger, Zipkin, 
+        New Relic, Dynatrace, Datadog.

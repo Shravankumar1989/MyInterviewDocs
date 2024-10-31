@@ -1,0 +1,6 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Shell Scripting
+----------------
+    1. bash <script.sh>: Execute a shell script.
+    2. chmod +x <script.sh>: Make a script executable. 

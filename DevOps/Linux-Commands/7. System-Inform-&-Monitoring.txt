@@ -1,0 +1,11 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+System Information and Monitoring
+---------------------------------
+    1. top: Task manager for viewing system processes.
+    2. htop: An improved version of top.
+    3. uname -a: Display system information.
+    4. df -h: Check disk usage.
+    5. free -h: Display memory usage.
+    6. uptime: Show how long the system has been running.
+    7. ps aux: Display running processes.

@@ -1,0 +1,19 @@
+Node Selector
+-------------
+1.  kubectl label nodes <node-name> <key>=<value>
+    kubectl label nodes node1 size=large
+
+2.  kubectl get nodes --show-labels
+
+3.  Pod with Node Selector Example
+    
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: mypod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+      nodeSelector:
+        size: large

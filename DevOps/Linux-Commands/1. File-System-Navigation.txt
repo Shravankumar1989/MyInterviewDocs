@@ -1,0 +1,9 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+File System Navigation
+---------------------------
+    1. pwd: Print working directory.
+    2. cd: Change directory.
+    3. ls: List files and directories.
+    4. ll: Long listing format (common alias for ls -l).
+    5. tree: Display directory structure in a tree format.

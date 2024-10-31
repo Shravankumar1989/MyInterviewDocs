@@ -1,0 +1,57 @@
+sudo apt update
+sudo apt install openjdk-17-jre
+java -version
+
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+cp -r Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/ CI-CD-Pipeline/
+
+
+
+
+sudo usermod -aG docker jenkins
+sudo usermod -aG docker $USER
+sudo chmod 666 /var/run/docker.sock
+sudo systemctl restart docker
+sudo systemctl status docker
+
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+docker update --restart always sonar
+
+docker run -d --name nexus -p 8081:8081 sonatype/nexus3
+docker update --restart always nexus
+
+for getting password 
+
+docker ps -a
+
+
+
+docker exec -it 4a465a74ea0a /bin/bash
+ls 
+cd sonatype-work/
+ls 
+cd nexus3/
+ls
+cat admin.password
+
+
+for coming out
+
+type - exit
+or click ctrl+D
+
+http://3.110.77.155:8080/ - jenkins
+http://35.154.196.245:9000/projects - sonarqube
+http://35.154.196.245:8081/#browse/search - nexus
+

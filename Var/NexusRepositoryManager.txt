@@ -1,0 +1,3 @@
+Hosted  - 
+Proxy   - 
+Group   - Club with Hosted and Proxy

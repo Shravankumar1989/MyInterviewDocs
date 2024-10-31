@@ -1,0 +1,207 @@
+and this is my answer
+
+OK.OK.Govt ID proof. Yeah I have only Indian government.
+30:26
+Is it too good? Right?
+30:32
+OK.OK.Yeah, OK.Yeah, OK.
+31:00
+Yes.Yes.Esther hi myself Taranpar Patel, I have overall experience is a eight years of treatment relevant experience into devast and Azure that have four years of treatment and I have experience with the tools and technology thinking coupon is ancient terraform.
+31:21
+And Kubernetes and along with that Azure and along with that AWS and along with that Zira confluent bit bucket. And I have experience with the infra developed along that application developed in infrared basically define the *** pipeline using the Jenkin and deploying into the Kubanese cluster and Altai.
+31:45
+Providing the Azure infrastructure into the Azure within the terraform and also I had defined that repository beat bucket providing the permission in the future is creating the and also working with a couple of teams thread table. Last time that is used into the JIRA. I need to stall those issues into the prior device.
+31:48
+And also will help for the production throughput.
+32:01
+Mm-hmm.Mm-hmm.GCP, not directly. Are you working with the experience with the Azure Alanguta at AWS? Okay.
+32:25
+Yes, I.Yes, I.DCBI have not gone through that till the date, but most of the time try working with their aw, Telang with that, uh, Azure. OK, Yeah, mm-hmm, yeah.
+32:40
+Mm-hmm.Mm-hmm.Yeah, yeah. I have done that because develop means we need to do that. TID pipelines are OK that is the mandatory for that. Everyone worked OK.
+33:15
+Uh, actually, uh, most of the times I will approach with a blue-green deployment approach, uh, and along with that, uh, uh, products in environment, basically we will do that. Uh, uh, OK. So basically when we'll start that right, we will create a individually pipeline. OK. So first of all, we approach start with that.
+33:19
+Branching strategy. Branching strategy may here more critical part of that.
+33:39
+Branching target. Basically we can want to create that rubbish right? We will write some condition for that like nobody can commit into the main trajectory. So just we need to give the permission for the pulling code. After that we need to use the git flow branching strategy.
+33:56
+Main and development and features release hard fix these branches we will create accordingly. Suppose when we get that new requirement right, we will take the code from.
+34:12
+Develop branch after that we will implement all those all those features right feature. Basically once we done all the features right after that we that feature we merge into the development and after that you will take into the.
+34:21
+But local system everything working fine. That same code we will merge merge with.
+34:44
+We will take the full request for merge brand static like tagging branches. So that is also we will check into the for staging and UATV created the different pipeline for that for staging and UAT for fight. We are deploying into the Kubernetes structure within the Argo 3D. Basically we are deploying that images. Basically we are creating that images.
+35:04
+To hear work everything is working fine right Say after that we will take the pull request. After that we need to given the permission like a toppled to minimum person has to be valid that code minimum one hour.
+35:30
+Build had been checked with all the territory has matched. Right after that we are requesting the full request. The team will go through that higher team if everything working fine. After that we are taking the product and using that blue-green deployment. Blue is already running state, Blue is a releasing which which.
+35:34
+Application we are going to release that is in blue-green one.
+36:04
+So we will send the request like we are maintaining the load balancing right for 90% and the request to editing one that is the blue 1 and 10% request you are sending to the green one that is new one, right. Based on that request we can tell that whether the users can able to access the application Oregon not based on their perspective based on their comment.
+36:23
+I will if everything working fine again, we'll turn the request 10 to 20 day by increasing by 1 by 1. If if not working go fine as well again we will revert with the blue one only OK.
+36:35
+So something is when we get that teachers right again, we will do that. Take the code from the main brand to.
+36:59
+Basically you can use for the fitting that production is used OK once everything is fixed right in artificial. After that the code you will merge into the development brand, development to main brand again. Same process here new features you are deploying to the green one and within the editing blue one. This is the approach until our.
+37:05
+The deployment had been successful. This is the approach we are following that.
+37:34
+Uh, TDD and BDD, right? Tech driven development, test driven development, we can tell that. Along with that, we can tell that business driven development, okay, test driven, test driven development means we are creating that UAT.
+37:53
+Tagging this is all are we going the testing on that? So once everything working fine right after that we will go ahead with BDD. Actually I even the wrong behavior driven development, you can tell that behavior driven development what you will give that.
+38:19
+Our our application is working as expected or not. This is using the behavior driven. We can use that tech driven development. What are the we have implemented all the things is as expected working or not with all the things we can take into the test driven and behavior driven development. Basically when look into that.
+38:25
+Like how you can tell that how exactly our application is behaving.
+38:30
+This is the main difference between TDD and BDD. OK.
+39:00
+Hi basically currently actually I working at the Java Java project. Our GI is basically we are using that denking okay so we are committing code in the guitar repository when developer commits the code guitar propagator right after that.
+39:20
+We are triggering the pipeline of using the Jenkins OK. So one Jenkin pipeline first step would be we are checking the code. We are basically checking the code OK stuck out the code. After that we are building the application like build.
+39:31
+Maven cleaning tall it will create a wire or jar file. After that we are doing the unit testing. Maven test. Using the maven test we are doing the unit testing.
+39:53
+After that we are doing the static code analysis. Basically we can tell that a code coverage within the sonar cube, you check in the code coverage in that any duplicate code, any code smelling any secret information is exposing or not. This kind of we are doing that.
+40:11
+Testing for that in code coverage. Basically we have written the rules in. The rules would be our code has more than 85% should be passed then only we will take into the next process otherwise you are aborting the pipeline. After that we are sending the.
+40:40
+Mail to the team. OK this is one code. Code coverage perfect fine. Quality gate will provide the true or false whether our core coverage code coverage is match up or not. If code coverage everything fine after that it will give the quality after that it will go to the next step next stage. Basically we are where or there file based on that form XML file.
+40:42
+We are storing that binary file into the.
+41:12
+Jay Frog Artifactory OK weren't this is done right after that We are actually for this application. We are using the docker. Okay, why docker? Docker is very lightweight you can able to run anywhere. It doesn't require the like before we can tell that our this code running in our my system. This kind of issue can't get it in within the docker. So what what we have written we created the one docker file that using.
+41:33
+File we are building that image OK docker build minus the image name after that dot. Once this is docker image has created right for that we need to check that image also that we are basically we are using the dash tool dynamic application security testing.
+41:40
+In that we are checking any based image of variabilities there or not.
+42:04
+Using the HLA can we are using. Using the HTL app can we are doing the testing After the vent everything fine. That e-mail we are storing into the our private. In the in the current organization we are within the docker registry only private that docker push the image name. After that we are passing the term credential for that.
+42:10
+We are storing that image into the guitar repository. Sorry.
+42:26
+This is CI partner OK CD part. What we done we have created a one more repository. In that repository we return that some of the files the docker files, services file, ingress file.
+42:56
+And this file is already created. But in that deployment file we are updating that image. Whichever we get that new image name, right? That image name we are updating into the deployment ML file. That deployment file or repository we are connected with, that RBG is always looking to that any new image that came or not if anything get a new image.
+43:10
+That Kubernetes pull the information and that it will deploy into the Kubernetes cluster. This entire process we have implemented Sir.
+43:25
+Yeah. I'm, I'm, I'm provision the AWA sector along AWA sector within the Terra firm, OK.
+44:28
+OK.OK.Uh, basically we can, uh, uh, we can view the, uh, like, uh, basically you can use the chat up, uh, set up a crowned like schedule the task to check the Worthing of your images. OK, This is when we can tell that and CICD pipeline integrated with the CICD like Jenkins or the club.
+44:35
+Every 20 days you can trigger the new build of your docker images. OK this is also you can able to do that along with that.
+44:53
+Like versioning control you can tell that make sure that image properly you don't face any like conflict with the older version. We need to maintain that version control OK that is also you can able to do that along with that.
+44:58
+Yeah, this, this. You can tell that okay.
+45:11
+Already I mentioned that using that like basically.
+45:23
+Managing like.Managing like.Using the ground up only itself, you can manage the things right Sir.
+45:35
+And also you can manage with that pipeline and managing with that working controller that we think that Ultra can manage all the things, right?
+45:56
+OK.OK.Yeah, Terraform state file is the heart of our terraform to whatever you creating with whatever you doing all the all the.
+46:10
+All the all the things you're writing the terraform right while terraform apply right? All the information it will store into the state file only. So suppose if you want to do something into the next time.
+46:40
+It will first check with the state file and state file with the AW where you created that research right. It will check with It will check with that Co currently whether I have created with that resources there in the AWS or not. If you given the update, it will whichever you given the task like creating new instant that it will create one new one editing to leave that if you given the updated right updating.
+47:00
+It will update the update it. After that it won't create anything based on that state. File is always checked with the infrastructure whether whatever they given by the user that is matching or not. If we get a new touch, I need to create that or I need to provision that information, I provide that infrastructure.
+47:30
+That state value the heart of terraform if something terraform file is corrupted or something, right? If you want to apply this terraform apply command. If terraform didn't find a state file, it will consider rather I need to create one more time whole infrastructure into the a double S or some other OK, so again it will create a one more state file. So that is done.
+47:39
+This kind of you want don't face right? So what we will do that trade files we are storing the.
+47:57
+Three bucket. Basically you can tell that remote data OK using the remote state. You can store the all the state file into bucket. Suppose something happened right? We need to enable at a working control. Something gonna happen using the working can get the previous file.
+48:17
+You can consequences you can able to handle on that. Along with that if you are working with the 10 number of teams with the team state file right that time also you can get some of the So for that what we need to do state lock file. We can tell that state lock file using the Dynamo DBM.
+48:40
+When I am working the state file until the terraform apply command right, nobody can work on that the same thread file until my task has to be completed. Once my task has completed on that file, any other person can able to do work on that. This is all about the state file.
+48:55
+Uh, local, uh, we can, uh, terraform, you can tour that, basically.
+49:15
+Terraform state for little uh, tore into the local only local in in current Chittham only local. Okay, remote back end means already I informed that the state file we can able to store into the a three packet or somewhere else. OK, so most of the times you are touring into the three bucket only that we can call that remote.
+49:44
+Dependencies module right? First of all first of all we need to write that module wise. In that module you can write that main whatever you required you can write that. After that you can in the in the current folder main dot TF file. In the root folder main dot TF file will be there in that main TF file using the module.
+49:50
+You can pass that module details to example VPG. I created VPG model right?
+50:20
+We pitched him that folder name I given VPG but I want to call into the our main TF file right in route folder maintfile module. In that in the module you need to pass that VPC module so you can able to when try to exit to try it, it will look into that VPC folder and after that you can able to run that suppose if you want dependency right example.
+50:34
+I have created that moduli J3 bucket after that VPG one model. OK so I want to create create dependence like 1-3 bucket is created then only I can able to create that VPT.
+50:53
+Using the depend on using the depend on command we can able to achieve this once has been created after that my next process will be start. Using the depend on command you can able to achieve this OK.
+51:16
+MMM.MMM.Handle, uh, most of the times we will do that, uh, like, uh, uh, Hachi cup vault along with that, we we will the aw secret manager. So using that you can able to handle a secret. Okay.
+51:35
+Hmm.Hmm.From actually like basically what we will do that we need to pass the information like.
+51:55
+Like we actually Hachika will provide the some basic code okay using that code we need to implement in that. So basically we need to in Hatchi cup what will that we need to create on channel like I want to create something.
+52:14
+A channel in that whatever we required we store all the information there. So using that Channel or directory in that directory we can call that which are example are you working at. A user name I created with username with username password I given the password.
+52:24
+That variable I written that right in that Hathika, That username you can able to use into the terraform file.
+52:54
+Uh, actually declarative, basically, uh, declarative, like, uh, it is all about uh, like, uh, it is. You can uh, uh, in you are asking about the terraform or exact.
+53:07
+Declarative basically uh Hachika language. You can tell that declarative that is already uh, uh, imperative. I am not exactly remember, but declarative whatever they have written like.
+53:22
+Provider after that three churches and this kind of this is already written in the like declarative wave window. So eating that declarative we can able to create a infrastructure, OK.
+53:51
+Yeah.Yeah.Yes, I have a friend reading the photo three only I have it printed that to uh dumping that uh, taking the backup for every seven days to equal my equal database dumping. So that kind of I have done the automation. Okay.
+54:03
+Yeah, yeah.Yeah, yeah.What is in it right?
+54:10
+In it basically you can tell that like conductor of that Python like.
+54:23
+In in in language contact like a function within the function you can call that like say minute you can call it the constructor when you object is create right?
+54:29
+To automatically it will call your conductor. That is the OK.
+54:36
+Yeah.Yeah.Sorry.Sorry.
+54:53
+RA is a consist of key and value. You can able to create array array array within array OK so you can write that multidimensional array.
+55:10
+Key value array so listed we can able to it is just has indexed OK. So basically how in array have key and value in lift don't have like kind of that that you need to call at the index 0123.
+55:29
+OK, ya.OK, ya.What is pricing suppose I have?
+55:53
+Savan Kumar is the right I want to display for first three letter square bucket I will start it one and: 3 from 1:00 to 2:00 it will display and third one it will ignore. Slything means basically you can cut a word from the words.
+56:01
+Sorry.Sorry.Doctrine.Doctrine.
+56:08
+And drafting also same like.
+56:22
+Exactly a marcher but I didn't use that till the date. OK talk to you. Most of the time you lose the slides only to reversing like reverse displaying from fact in this kind of OK.
+56:52
+MMM MMM.MMM MMM.Cope like variable cope, you can tell that basically local scope like enclosing cope in along with that enclosing cope with built-in curve. This is all are created by that like basically it is function. You can tell that like super private function this kind of.
+57:16
+Hmm.Hmm.Local, enclosing and global and one more is a built in built in. Basically it will kill that length, light length river. This kind of functions will be there right built-in function you can using the build scope OK.
+57:36
+OK.OK.And one more thing.
+57:46
+Actually this is profile, I heard it for Azure but all of a sudden I got the question from GTP that I'm worried about. Okay.
+57:54
+No, no, no, not, not like that, Sir, actually.
+58:14
+Uh-huh.Uh-huh.OK, actually if if TTP the right that actually I don't honestly I honest I need to tell that because I don't got the exposure on the GCP. So most of the time I work with that Azure and AWS only. That's why I approach the profile OK.
+58:24
+If I get that opportunity to work on that definite, I will be willing to work on that, OK? I'm happy to get the new opportunity to work on the GGP, OK, Yeah.
+58:34
+Ya, ya.Ya, ya.OK, OK.OK, OK.
+58:37
+OK, Thank you. Bye bye.
+58:41
+Not bad. OK, Thank you.
+58:47
+Yeah, yeah. I will drop it now, OK.
+58:55
+Where is the drop? Yeah, believe me. OK, Bye. Bye.
+00:20
+Yeah, I thought.

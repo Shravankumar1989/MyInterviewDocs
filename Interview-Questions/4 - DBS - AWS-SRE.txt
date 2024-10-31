@@ -1,0 +1,46 @@
+1.  AWS & Cloud Services Questions
+----------------------------------
+    1.  What AWS components have you used? Can you list them?
+    2.  Can you explain the differences between EC2, Lambda, and ECS? When would you use each?
+    3.  What is a VPC, and what components are involved in setting it up?
+    4.  Can you explain how a NAT Gateway works and its role within a VPC?
+    5.  How do you export metrics from AWS CloudWatch to an external tool like Grafana?
+    6.  What tools do you use to monitor cloud infrastructure?
+
+2. Kubernetes and EKS
+----------------------------------
+    1.  Explain the components of an EKS cluster: cluster, node group, and pods.
+    2.  How does Kubernetes' kubectl get pod differ from kubectl describe pod?
+    3.  What is a ConfigMap in Kubernetes, and how do you use it?
+    4.  Can you explain Horizontal Pod Autoscaling (HPA) and its configuration?
+    5.  How do you monitor a Kubernetes cluster using Prometheus and Grafana?
+
+3. SRE (Site Reliability Engineering) & Incident Management
+----------------------------------
+    1.  What is the role of an SRE? How does it differ from traditional production support?
+    2.  How do you troubleshoot an application slowness or failure in AWS? Provide a step-by-step approach.
+    3.  What tools do you use for monitoring and troubleshooting incidents?
+    4.  What is the incident management lifecycle? How do you handle incidents and create post-incident reports?
+    5.  Have you worked with error budgets? Can you explain their relevance in SRE?
+
+4. Observability & Monitoring Tools
+----------------------------------
+    1.  What observability tools have you used (e.g., Prometheus, Grafana, Splunk, Elasticsearch, Kibana)?
+    2.  Can you explain the difference between sed and yq? What are they used for?
+    3.  What tools do you recommend for observability in on-premises systems?
+    4.  Have you worked with Fluent Bit? What is its role in Kubernetes logging?
+
+5. Programming and Scripting
+----------------------------------
+    1.  How comfortable are you with Java? Can you understand and debug Spring Boot code?
+    2.  What is the difference between mutable and immutable objects in Java? How are strings stored in memory?
+    3.  What is the purpose of Python's Boto3 module? How have you used it in AWS?
+    4.  How familiar are you with shell scripting? What common tasks have you automated using shell scripts?
+
+6. Behavioral and Role-Specific Questions
+----------------------------------
+    1.  Are you comfortable working in 24/7 shift rotations, including night shifts?
+    2.  What tools and technologies are you looking to learn or upgrade to support this role?
+    3.  How do you handle communication during incident resolution?
+    4.  What experience do you have working with Pivotal Cloud Foundry (PCF)?
+    5.  Can you describe your current responsibilities and key achievements in your DevOps/SRE role?

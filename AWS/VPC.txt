@@ -1,0 +1,38 @@
+1. How to Create - VPC:
+-----------------------
+    1.  Create VPC
+    2.  Assign CIDr
+        12.0.0.0/16 - 65+ IP address
+
+2. How to Create - Internet Gateway:
+------------------------------------
+    1.  Create Internet Gateway - Name
+    2.  attach VPC(which is created) with Internet Gateway(which is created)
+
+3.  How to Create Subnet:
+-------------------------
+    1.  Select VPC(which is created)
+    2.  Add Subnet Name 
+    3.  Select Availablity Zone
+    4.  IVP4 CIDR (which us created in VPC i.e 12.0.0.0/16)
+    5.  IVP4 Subnet CIDR Block
+        12.0.1.0/24 - 256 IP address
+
+
+    1.  Select VPC(which is created)
+    2.  Add Subnet Name
+    3.  Select Availablity Zone
+    4.  IVP4 CIDR (which us created in VPC i.e 12.0.0.0/16)
+    5.  IVP4 Subnet CIDR Block
+        12.0.2.0/24 - 256 IP address
+
+4. How to Create Route Table:
+-----------------------------
+    1.  Create Route Table - Name
+    2.  Select VPC(which is created)
+    3.  Subnet Associate with Route Table
+    4.  add Internet Gateway Route
+        example:
+            Destination     Target              
+            -----------     ------
+            0.0.0.0./0      Select Internet Gateway(which is created)

@@ -1,0 +1,48 @@
+https://www.linkedin.com/in/imran-khan-8520b457/
+
+What is kubernetes?
+-------------------
+Kubernetes is an open-source container orchestration tools 
+for deploying, scaling, and managing automated applications.
+
+
+Kubernetes Architecture
+----------------------------
+
+1. KubeCtl
+2. API Server
+3. Controller Manager
+4. ETCD
+5. Kube-Scheduler
+6. Node
+      - Kubelet
+      - kube-proxy
+      - Pod
+      - Container Runtime Engine
+
+
+Note: 
+
+point 2,3,4,5 - is a master node
+point 6 - is a worker node
+
+1. KubeCtl - Kubectl is the default interface Tool between the user and cluster.
+
+2. API Server - API Server is component through which the user interact with the control plane.  
+
+3. Controller Manager - Reponsible managing all the contollers in the cluster
+ex. Replication controller, Node controller, Endpoint controller, Token controller 
+
+4. ETCD - All the cluster data is stored in key-value store called ETCD.
+
+5. Kube-Scheduler - Kube-Scheduler is a control plane process which assigns Pods to Nodes
+
+6. Node - Node is a worker machine in a cluster
+
+      - Kubelet = Kubelet is a Kuberbetes agent that manages the node
+
+      			  and Ensure all the pods are running and healthy
+
+      - Kube-proxy = Kube-proxy manage all the network traffic on the node
+
+      - Container Runtime Engine = Container Runtime Engine is responsible for running containers on the cluster 

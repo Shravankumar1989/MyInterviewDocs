@@ -1,0 +1,29 @@
+# prometheus.yml
+
+global:
+  scrape_interval: 15s    # How frequently to scrape targets
+  evaluation_interval: 15s  # How often to evaluate rules
+
+# Alerting configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # Alertmanager target (if using Alertmanager)
+          # - 'localhost:9093'
+
+# Rule files to be used for alerting and recording
+rule_files:
+  # - "alert_rules.yml"  # Uncomment to include custom alert rules
+
+# Scrape configuration
+scrape_configs:
+  # Scrape Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Scrape a node exporter running on another machine
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['<node_exporter_IP>:9100']  # Replace <node_exporter_IP> with the actual IP

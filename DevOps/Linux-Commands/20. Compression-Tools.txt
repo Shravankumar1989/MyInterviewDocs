@@ -1,0 +1,8 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Compression Tools
+------------------
+    1. gzip <filename>: Compress a file.
+    2. gunzip <filename.gz>: Decompress a file.
+    3. bzip2 <filename>: Compress a file using bzip2.
+    4. bunzip2 <filename.bz2>: Decompress a bzip2 file.

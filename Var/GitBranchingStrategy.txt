@@ -1,0 +1,22 @@
+Git Workflow Summary(Git Flow)
+------------------------------
+1. Starting a New Feature:
+    - Create a feature branch from develop.
+    - Develop the feature.
+    - Merge the feature branch back into develop.
+
+2. Preparing for a Release:
+   - Create a release branch from develop when it’s time to release.
+   - Perform final testing and make last-minute fixes on the release branch.
+   - Merge the release branch into master and develop once it’s ready to go live.
+
+3. Fixing a Critical Bug in Production:
+   - Create a hotfix branch from master.
+   - Fix the bug.
+   - Merge the hotfix branch into both master and develop.
+
+Visual Workflow
+-------------------
+Feature branches (from develop) → Merge into develop
+Release branches (from develop) → Merge into master and develop
+Hotfix branches (from master)   → Merge into master and develop

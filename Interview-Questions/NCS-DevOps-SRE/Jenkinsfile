@@ -1,0 +1,132 @@
+pipeline {
+    agent any
+
+    environment {
+        // Define global environment variables
+        GIT_REPO = 'https://github.com/your-repo/app.git'
+        BRANCH = 'main'
+        IMAGE_TAG = "app:${env.BUILD_NUMBER}"
+        DOCKER_REGISTRY = 'your-docker-registry'
+        SONAR_TOKEN = credentials('sonarqube-token')
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                // Fetch the latest code from the specified branch
+                git branch: "${BRANCH}", url: "${GIT_REPO}"
+            }
+        }
+
+        stage('Static Code Analysis') {
+            steps {
+                // Run SonarQube scan for code quality and vulnerabilities
+                withSonarQubeEnv('sonarqube-server') {
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=my-app'
+                }
+            }
+        }
+
+        stage('Compile & Build') {
+            steps {
+                // Compile the code and package the application
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('Unit Tests') {
+            steps {
+                // Run unit tests and ensure the build fails if tests fail
+                sh 'mvn test'
+            }
+        }
+
+        stage('Integration Tests') {
+            steps {
+                // Run integration tests
+                sh './scripts/run-integration-tests.sh'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                // Build Docker image and tag it with the build number
+                sh "docker build -t ${DOCKER_REGISTRY}/${IMAGE_TAG} ."
+            }
+        }
+
+        stage('Push to Docker Registry') {
+            steps {
+                // Push the built Docker image to the registry
+                withCredentials([usernamePassword(credentialsId: 'docker-credentials', 
+                                  usernameVariable: 'USERNAME', 
+                                  passwordVariable: 'PASSWORD')]) {
+                    sh """
+                        echo "$PASSWORD" | docker login -u "$USERNAME" --password-stdin ${DOCKER_REGISTRY}
+                        docker push ${DOCKER_REGISTRY}/${IMAGE_TAG}
+                    """
+                }
+            }
+        }
+
+        stage('IaC Deployment to UAT') {
+            steps {
+                // Deploy infrastructure using Terraform in UAT environment
+                dir('iac') {
+                    sh 'terraform init'
+                    sh 'terraform apply -auto-approve'
+                }
+            }
+        }
+
+        stage('Deploy to UAT Environment') {
+            steps {
+                // Deploy the Docker container to the UAT environment
+                sh "kubectl set image deployment/my-app my-app=${DOCKER_REGISTRY}/${IMAGE_TAG} --namespace=uat"
+            }
+        }
+
+        stage('Application Health Check') {
+            steps {
+                // Run a script to check the health of the application in UAT
+                sh './scripts/health-check.sh'
+            }
+        }
+
+        stage('Approval for Production Deployment') {
+            when {
+                branch 'main'
+            }
+            steps {
+                // Pause for manual approval before proceeding to production deployment
+                input message: 'Approve Deployment to Production?', ok: 'Deploy'
+            }
+        }
+
+        stage('Deploy to Production') {
+            steps {
+                // Deploy to the production environment
+                sh "kubectl set image deployment/my-app my-app=${DOCKER_REGISTRY}/${IMAGE_TAG} --namespace=prod"
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up workspace after the pipeline run
+            cleanWs()
+        }
+        success {
+            // Notify stakeholders about successful deployment
+            mail to: 'team@example.com',
+                 subject: "Build Successful: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "The build was successful and deployed to UAT. Check the application health."
+        }
+        failure {
+            // Notify stakeholders about build or deployment failure
+            mail to: 'team@example.com',
+                 subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "The build or deployment has failed. Please investigate."
+        }
+    }
+}

@@ -1,0 +1,106 @@
+ImagePullBackOff or ErrImagePull
+--------------------------------
+
+1. what is the cause of ImagePullBackOff?
+    1.1 Incorrect Image Name or Tag
+    
+    1.2 Missing Image in the Registry
+    
+    1.3 Registry Requires Authentication
+
+2. How to debug or troubleshoot the ImagePullBackOff?
+    2.1 Inspect Pod Status
+        kubectl describe pod <pod-name> -n <namespace>
+    
+    2.2 Check the Pod Logs (If Applicable)
+        kubectl logs <pod-name> -n <namespace>
+    
+    2.3 Verify Image Name, Tag, and Registry
+        kubectl get deployment <deployment-name> -o yaml
+    
+    2.4 Test Image Pull Manually from Nodes
+        docker pull <image-name>
+    
+    2.5 Validate ImagePullPolicy
+        kubectl get pod <pod-name> -o yaml | grep imagePullPolicy
+    
+    2.6 Use kubectl exec to Debug the Node Environment
+        kubectl exec -it <pod-name> -- /bin/bash
+
+    2.7 Check the CPU, Memory and Load Average
+        2.7.1   Install the Metrics Server
+                kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+        
+        2.7.2   Using kubectl top
+                kubectl top pod <pod-name> --namespace <namespace>
+        
+        2.2.3   Check memory usage:
+                free -h
+        
+        2.7.4   Check CPU usage:
+                top
+        
+        2.7.5   Alternatively, check CPU load averages
+                uptime
+
+        2.7.6   Use ps to check processes
+                ps aux --sort=-%mem | head
+        
+        2.7.7   Use htop for an Enhanced View (if installed)
+                htop
+
+2. CrashLoopBackOff
+-------------------
+1.  what is the cause of CrashLoopBackOff?
+    pod starts, crashes, and Kubernetes tries to restart it again, but it fails to run successfully.
+
+    1.1 Misconfigured Startup ENTRYPOINT or CMD
+
+    1.2 Missing Configuration or Environment Variables
+
+    1.3 Insufficient Resources (Memory or CPU)
+
+    1.4 Crash Due to OOMKilled (Out of Memory)
+
+    1.5 Unhealthy Readiness or Liveness Probes
+
+2.  How to debug or troubleshoot the CrashLoopBackOff?
+    2.1 Check the Pod Logs (If Applicable)
+        kubectl logs <pod-name> -n <namespace>
+        kubectl logs <pod-name> --namespace <namespace> --previous
+
+    2.2 Describe the Pod
+        kubectl describe pod <pod-name> --namespace <namespace>
+    
+    2.3 Inspect Pod Events
+        kubectl get events --namespace <namespace>
+
+    2.4 Review Liveness and Readiness Probes
+
+    2.5 Check Resource Limits
+        kubectl top pod <pod-name> --namespace <namespace>
+
+    2.6 Use Debugging
+        kubectl exec -it <pod-name> --namespace <namespace> -- /bin/sh
+
+    2.7 Check the CPU, Memory and Load Average
+        2.7.1   Install the Metrics Server
+                kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+        
+        2.7.2   Using kubectl top
+                kubectl top pod <pod-name> --namespace <namespace>
+        
+        2.2.3   Check memory usage:
+                free -h
+        
+        2.7.4   Check CPU usage:
+                top
+        
+        2.7.5   Alternatively, check CPU load averages
+                uptime
+
+        2.7.6   Use ps to check processes
+                ps aux --sort=-%mem | head
+        
+        2.7.7   Use htop for an Enhanced View (if installed)
+                htop

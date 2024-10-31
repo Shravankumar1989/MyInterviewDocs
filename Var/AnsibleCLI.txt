@@ -1,0 +1,81 @@
+Ansible CLI (Command Line Interface)
+
+1. Ansible
+-------------------------
+This command is used to run ad-hoc commands on remote nodes.
+
+Syntax:
+ansible [pattern] -m [module] -a "[module options]"
+
+Example:
+ansible all -m ping
+
+
+2. ansible-playbook
+-------------------------
+This command runs Ansible playbooks, which are YAML files defining a set of tasks to be executed on remote nodes.
+
+Syntax:
+ansible-playbook [options] playbook.yml
+
+Example:
+ansible-playbook site.yml
+
+3. ansible-inventory
+-------------------------
+This command manages and displays inventory information.
+
+Syntax:
+ansible-inventory [options]
+
+Example:
+ansible-inventory --list -y
+
+
+Common Options and Flags
+-------------------------
+1. -i, --inventory: Specify inventory host path or comma-separated host list.
+Example: ansible-playbook -i inventory/hosts site.yml
+
+2. -u, --user: Connect as a specific user.
+Example: ansible all -m ping -u ansible_user
+
+3. -v, --verbose: Increase verbosity (add more v for more verbosity).
+Example: ansible-playbook site.yml -vvv
+
+4. -m Modules
+Example: ansible all -m ping
+
+
+Common Modules
+-------------------------
+1. ping: Check connectivity to hosts.
+Example: ansible all -m ping
+
+2. command: Execute commands on remote nodes.
+Example: ansible all -m command -a "uptime"
+
+3. shell: Execute shell commands on remote nodes.
+Example: ansible all -m shell -a "echo $HOME"
+
+4. copy: Copy files to remote nodes.
+Example: ansible all -m copy -a "src=/local/path dest=/remote/path"
+
+5. file: Manage files and directories.
+Example: ansible all -m file -a "path=/remote/path state=directory"
+
+6. yum: Manage packages on Red Hat-based systems.
+Example: ansible all -m yum -a "name=httpd state=present"
+
+7. apt: Manage packages on Debian-based systems.
+Example: ansible all -m apt -a "name=nginx state=present"
+
+
+Using Vault for Secrets
+Ansible Vault encrypts sensitive data within Ansible files.
+-------------------------
+1. Creating Encrypted Files:
+Example: ansible-vault create secret.yml
+
+2. command: Editing Encrypted Files:
+Example: ansible-vault edit secret.yml

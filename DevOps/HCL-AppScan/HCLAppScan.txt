@@ -1,0 +1,23 @@
+URL:- https://help.hcl-software.com/appscan/ASoC/appseccloud_jenkins.html
+
+Procedure
+1. In Jenkins, install the HCL AppScan plug-in:
+    1.1 Select Manage Jenkins and then Manage Plugins.
+    1.2 Select the Available tab and then select the check box next to HCL AppScan.
+    1.3 Click one of the installation buttons at the bottom of the page. 
+        After installing the HCL AppScan plug-in, you must restart Jenkins before using it. 
+        However, you may want to install it and then restart Jenkins later (for example, if you have running jobs).
+    
+    Note: Depending on the version of Jenkins that you are running, these steps may vary slightly.
+
+2. After restarting Jenkins, add credentials so that your build project can connect to AppScan on Cloud:
+    2.1 In the Jenkins dashboard, select Credentials.
+    2.2 In the Credentials page, add new global credentials. 
+        To do this, select the arrow icon next to the (global) link and then select Add credentials.
+    2.3 In the credentials page, select HCL AppScan on Cloud Credentials in the Kind list.
+    2.4 Specify an AppScan on Cloud server URL for the connection. By default, the URL is https://cloud.appscan.com.
+    2.5 When you generate an API key in the AppScan on Cloud service, you receive a Key Id and Key Secret. 
+        Enter these values in the ID and Secret fields. If you have not yet generated an API key, follow the link for creating one.
+    2.6 Optional: Use the Label field to add an identifier for the credentials.
+
+3. 

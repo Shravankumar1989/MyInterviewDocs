@@ -1,0 +1,10 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Networking
+----------
+    1. ping <hostname>: Check the connectivity to a host.
+    2. ifconfig: Display network interface information (replaced by ip).
+    3. ip addr show: Display IP addresses of network interfaces.
+    4. netstat -tuln: List open ports and listening services.
+    5. curl <url>: Send HTTP requests.
+    6. wget <url>: Download files from the web.

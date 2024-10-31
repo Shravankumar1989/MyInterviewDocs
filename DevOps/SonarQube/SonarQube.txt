@@ -1,0 +1,83 @@
+what is SonarQube?
+1. SonarQube is an open-source platform used for continuous inspection of code quality.
+2. It performs automatic reviews of code to detect bugs, code smells, and security vulnerabilities.
+3. it will run on 9000 Port
+4. Latest Version: 10.6
+
+Key Features of SonarQube:
+    1. Code Analysis: SonarQube provides static code analysis to identify potential issues in the codebase, 
+    such as bugs, vulnerabilities, and code smells.
+    2. Quality Gates:
+    3. Multi-Language Support:
+    4. Integration with CI/CD Pipelines
+    5. Reporting: SonarQube provides detailed reports on code quality, which can be used to track progress and 
+    identify areas for improvement.
+    6. Developer Feedback: It provides feedback directly to developers by integrating with IDEs, ensuring that 
+    issues are addressed early in the development process.
+
+
+What are the Types of SonarQube?
+1. Community Edition
+2. Developer Edition
+3. Enterprise Edition
+4. Data Center Edition
+
+which is most using application of SonarQube
+1. Community Edition
+2. Developer Edition & Enterprise Edition
+
+
+what is the SonarQube?
+1. Code COverage
+2. Code Quality Check
+    2.1 Bugs
+    2.2 vulnerabilities
+    2.3 Code smells
+    2.4 Dupplicate Code
+    2.5 Sensitive information exposing or not.
+
+
+what is the major issue will face while SonarQube configuration?
+1. Performance and Scalability
+    1.1 Resource Management
+    1.2 Database Performance
+2. Integration with CI/CD Pipelines
+    2.1 Pipeline Delays
+    2.2 Configuration Complexity
+3. Database Configuration
+    3.1 Database Compatibility
+    3.2 Migration Issues
+4. Plugin Management
+    4.1 Compatibility Issues
+    4.2 Plugin Conflicts
+5. Security and Access Control
+    5.1 User Management
+    5.2 SSL/TLS Configuration
+6. Custom Rule Configuration
+7. High Availability and Load Balancing
+
+
+What is homepage in SonarQube?
+1. Projects
+    1.1 your project which is created by you and team
+2. Issues
+    2.1 The Issues tab lists all the detected issues across all projects.
+    Issues can be bugs, vulnerabilities, or code smells. 
+    You can filter these issues by severity, project, assignee, and more.
+3. Rules
+    3.1 Basically rules written for indiviusal program and which is defined by SonarQube. 
+    3.2 And you can also write the custom rules for any Language
+4. Quality Profiles
+    4.1 Quality Profile which is created by SonarQube 
+    4.2 In this Quality Profile set of profiel and rules are there for Java, PHP, Node.js etc
+    4.3 and this all are default
+5. Quality Gates
+    IMP: You can also create Quality Gates
+    5.1 Quality Gates use for condition on new code
+    5.2 Quality Gates complies with clean and code
+6. Administration
+    6.1 Configuration
+    6.2 Security
+    6.3 Projects:
+    6.4 System: Details about SonarQube Application or Server
+    6.5 Marketplace: install plugins

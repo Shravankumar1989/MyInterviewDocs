@@ -1,0 +1,33 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+File Permissions
+----------------
+      1. chmod u+x <file>: Give the file owner execute permissions.
+      2. chmod g-w <file>: Remove write permission for the group.
+      3. chmod o+r <file>: Give others read permissions.
+
+      example:- chmod <permissions> <filename>: Change file permissions.
+
+Who (Letter)      Meaning
+---------------------------
+u	            user
+g	            group
+o	            others
+a	            all
+
+4 - read(r)
+2 - write(w)
+1 - execute(x)
+
+1. Using Symbolic Notation
+---------------------------
+ 	-rwx    r-x     r-- 
+      User    Group   others
+chmod u=rwx,  g=rx,   o=r   "0. File-Permission.txt"
+
+
+2. Using Octal Notation
+--------------------------
+ 	-rwx    r-x     r-- 
+      User    Group   others
+chmod 7       5       4     "0. File-Permission.txt"

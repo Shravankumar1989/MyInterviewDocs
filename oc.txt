@@ -1,0 +1,79 @@
+
+ 
+Red Hat Enterprise Linux CoreOS
+Red Hat Openshift Container Platform
+Red Hat Openshift Kubernetes Engine
+
+HA Proxy as ingress controller
+
+Open Shift Feature
+
+1. High Availabilty 
+2. Load Balancing 
+3. Automatic Scalability
+4. Service Discovery
+5. Storage
+6. Logging and monitoring
+7. Light weight operating system
+
+
+1. Deploy With Just Docker Image
+---------------------------------
+- Add Docker Image URL
+	- Create Secretes 
+		1. oc create secertes 
+
+	- Link Secretes Service Account
+	    1. oc secertes link default <secret name> --for=pull
+
+- Application Name
+- Name
+- Select Resource
+	- Deployment
+	- Deplotment Config
+- check the create a route to the application
+
+And Click Create Button
+
+2. Source to Image
+---------------------------------
+- Click on Topology 
+- Click on From GIT Option
+- Add Git Repo URL
+- Choose Builder
+	if java application you can use java builder image
+- Select builder image (NOTE- It will select automatically)
+- Application Name
+- Name
+- Select Resource
+	- Deployment
+	- Deplotment Config
+- check the create a route to the application
+
+And Click Create Button
+
+once done 
+Three action will going on
+- Create the Image
+- Push the image into repostory
+- Deploy into Openshift
+
+
+3. Deploy the application using command line
+--------------------------------------------
+- Copy login command on The Right corner
+- Click on Copy login command
+- Open with another tab
+- Select DevSandBox
+- open the page
+- Click on the Display Token
+- Copy the Command - OC login --token="" 
+
+
+- oc create app <giturl> context-dir=<branch-name> name=<application name>
+- oc get pods
+- oc get all - app=<application name>
+- oc get route
+
+4. Deploy using Template
+--------------------------------------------

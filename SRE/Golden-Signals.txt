@@ -1,0 +1,23 @@
+1. Golden Signals
+----------------
+    1.1 What it is: 
+        Four key metrics that help monitor the health of a system.
+        These are considered essential signals to spot issues early.
+
+    1.2 The Golden Signals are:
+        1.2.1   Latency – How fast or slow the system responds.
+        1.2.2   Traffic – Volume of requests or demand on the system.
+        1.2.3   Errors – Percentage of failed requests or operations.
+        1.2.4   Saturation – How much of the system’s capacity is used (e.g., CPU, memory).
+
+    1.3 Example:
+        If latency increases and error rates rise, 
+        it might indicate that the system is struggling to handle traffic.
+
+    1.4 Goal: 
+        To focus on the right metrics and ensure the service runs smoothly.
+
+Summary:
+----------------
+    Golden Signals: 
+        Four key metrics (latency, traffic, errors, and saturation) to monitor system health.

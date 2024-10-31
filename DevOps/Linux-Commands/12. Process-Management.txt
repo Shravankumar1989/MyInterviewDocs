@@ -1,0 +1,9 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Process Management
+------------------
+    1. ps aux: View running processes.
+    2. kill <PID>: Terminate a process by its PID.
+    3. killall <processname>: Terminate all instances of a process by name.
+    4. bg: Resume a suspended job in the background.
+    5. fg: Bring a background job to the foreground.

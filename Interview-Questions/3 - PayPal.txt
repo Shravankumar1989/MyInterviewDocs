@@ -1,0 +1,119 @@
+base image - debian
+change the user to root
+install curl and python3
+copy scripyt.py
+run the scripyt
+# Use Debian as the base image
+FROM debian:latest
+
+# Switch to the root user (default in Debian-based containers)
+USER root
+
+# Update the package list and install curl and python3
+RUN apt-get update && \
+    apt-get install -y curl python3 && \
+    apt-get clean
+
+# Copy the script.py file into the container
+COPY script.py /script.py
+
+# Set script permissions (optional: if needed to ensure it's executable)
+RUN chmod +x /script.py
+
+# Execute the script
+CMD ["python3", "/script.py"]
+
+
+Baseimage: debian
+Workdir /app
+cmd[]
+copy  scripyt.py /app
+ENTRYPOINT["python3", "scripyt.py"]
+
+
+docker build -t shravansahan/pythonimage .
+
+docker push shravansahan/pythonimage:latest --usrname="" --password=""
+
+docker run -it 
+
+deployment.yml
+apiVerion: V1
+kind: deployment
+metadata:
+    name: deployingpod
+:
+
+    Container
+        name: deployment
+        image: shravansahan/pythonimag
+    replica: 3
+    namespace:
+        name: deployment
+    resource:
+        request:
+            cpu:
+            memory:
+        allocate:
+            cpu:
+            memory:
+
+kubectl creat ns shravansahan
+
+kubectl context shravansahan
+
+kubectl apply -f deployment.yml -n shravansahan
+
+
+kubectl get nodes
+
+kubectl get pod
+
+kubectl describe pod podname
+
+kubectl top podname
+
+kubectl log pod podname --previous
+
+kubectl exec --it /bin/bash podname
+
+top
+logs
+
+
+
+provider "aws"{
+    region = "us-east-1"
+}
+
+
+varaiable "access_key"{
+    name = "access_key"
+    description ="description"
+    default = "access_key"
+}
+
+varaiable "secret_key"{
+    name = "secret_key"
+    description ="description"
+    default = "secret_key"
+}
+
+resource "aws_instance" "creatingindtance"{
+    ami = "id"
+    tag = {
+        name = "instancename"
+    }
+}
+
+terraform init
+terrafoem
+
+
+
+fopen("ansible.txt" "r") as replabale 
+
+for repla in replabale
+    if(repla === "ansbile")
+        replace = "replace"
+do

@@ -1,0 +1,8 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+File-Compression-Decompression.txt
+------------------------------
+    1. tar -czvf <archive.tar.gz> <directory>: Compress a directory into a tar.gz archive.
+    2. tar -xzvf <archive.tar.gz>: Extract a tar.gz archive.
+    3. zip <archive.zip> <filename>: Compress files into a .zip archive.
+    4. unzip <archive.zip>: Extract a .zip archive

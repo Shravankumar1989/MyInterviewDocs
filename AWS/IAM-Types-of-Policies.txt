@@ -1,0 +1,46 @@
+1.  what are the types IAM Policies?
+------------------------------------
+
+1.1 Managed Policies
+    1.1.1   AWS Managed Policies
+            Pre-built, maintained by AWS.
+
+            example:-   1. AmazonEC2FullAccess
+                        2. AmazonEC2ReadOnlyAccess
+                        3. AmazonS3FullAccess
+                        4. AmazonS3ReadOnlyAccess
+                        5. AmazonVPCFullAccess
+                        6. AdministratorAccess
+    
+    1.1.2   Customer Managed Policies
+            Custom, created and managed by you.
+
+1.2 Inline Policies
+    Tied directly to one specific user, group, or role.
+
+
+2.  What is an IAM Policies?
+----------------------------
+    2.1 An IAM Policies is JSON DOcuments that defines permissions.
+    
+    2.2 it consist of statements conatianing an
+        
+        2.2.1   Effect: "Allow" allows the action.
+        
+        2.2.2   Action: "s3:PutObject" allows the user to upload objects to an S3 bucket.
+        
+        2.2.3   Resource: "arn:aws:s3:::example-bucket/*" specifies that the action is 
+                allowed only for objects in the example-bucket.
+    
+    2.3 Example:
+
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                "Effect": "Allow",
+                "Action": "s3:PutObject",
+                "Resource": "arn:aws:s3:::example-bucket/*"
+                }
+            ]
+        }

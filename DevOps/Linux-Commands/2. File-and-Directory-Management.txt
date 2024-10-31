@@ -1,0 +1,11 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+File and Directory Management
+------------------------------
+    1. touch <filename>: Create a new file.
+    2. mkdir <dirname>: Create a new directory.
+    3. cp <source> <destination>: Copy files or directories.
+    4. mv <source> <destination>: Move or rename files or directories.
+    5. rm <filename>: Remove file.
+    6. rm -r <dirname>: Remove directory recursively.
+    7. ln -s <target> <linkname>: Create a symbolic link.

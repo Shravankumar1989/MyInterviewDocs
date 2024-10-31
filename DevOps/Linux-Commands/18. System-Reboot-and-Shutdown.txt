@@ -1,0 +1,7 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+System Reboot and Shutdown
+--------------------------
+    1. shutdown -h now: Shut down the system immediately.
+    2. reboot: Reboot the system.
+    3. shutdown -r +5: Reboot the system in 5 minutes.

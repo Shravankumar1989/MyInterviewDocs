@@ -1,0 +1,77 @@
+1.  Terraform Debugging Mode (TF_LOG)
+-------------------------------------
+    Terraform has a built-in logging mechanism that can help debug issues by 
+    providing detailed output for each step during execution.
+
+    Enabling Debug Mode:
+    You can enable logging by setting the TF_LOG environment variable. 
+    
+    The log levels are:
+    -------------------------------------
+        TRACE:  Very detailed debugging information.
+        DEBUG:  Useful for debugging most issues.
+        INFO:   Normal output.
+        WARN:   Warnings about potential issues.
+        ERROR:  Only error messages.
+
+        example -   
+            1.  export TF_LOG=DEBUG
+                echo $TF_LOG
+
+                export TF_LOG_PATH = "C:\Users\shrav\OneDrive\Documents\terraform-debug.log"
+                echo $TF_LOG_PATH
+
+            2.  To turn off the logging, simply unset the environment variable:
+                unset TF_LOG
+
+2.  Terraform State Commands
+----------------------------
+    2.1 terraform state list: 
+        Lists all resources in the state.
+
+        example - terraform state list
+
+    2.2 terraform state show <resource>
+        Shows details of a specific resource in the state.
+
+        example - terraform state show aws_instance.example
+
+3.  Summary of Key Commands
+---------------------------
+    3.1 terraform plan              -   Preview changes that Terraform will apply
+    3.2 terraform validate          -   Validate syntax and structure of Terraform config
+    3.3 terraform fmt	            -   Format Terraform code to maintain consistency
+    3.4 TF_LOG	                    -   Enable logging for debugging
+    3.5 terraform console           -   Test expressions and inspect variable/resource values
+    3.6 terraform graph	            -   Visualize resource dependencies
+    3.7 terraform refresh	        -   Sync the state with the real infrastructure
+    3.8 terraform state list/show	-   Inspect current state and resource details
+    3.9 terraform apply -target	    -   Apply changes to a specific resource for debugging
+
+4.  Using Validation
+--------------------
+
+    example 1:-
+    -----------
+    variable "instance_count" {
+        description = "Number of EC2 instances"
+        type        = number
+        default     = 1
+
+        validation {
+            condition     = var.instance_count >= 1 && var.instance_count <= 5
+            error_message = "The instance count must be between 1 and 5."
+        }
+    }
+
+    example 2:-
+    -----------
+    variable "environment" {
+        description = "The environment for deployment"
+        type        = string
+
+        validation {
+            condition     = contains(["production", "staging", "dev"], var.environment)
+            error_message = "The environment must be one of 'production', 'staging', or 'dev'."
+        }
+    }

@@ -1,0 +1,45 @@
+what is Artifactory? or what is JFrog Artifactory
+1. Artifactory is a binary repository manager developed by JFrog.
+2. It is a tool used to store, manage, and distribute binaries, artifacts, and dependencies in software development processes.
+3. JFrog Artifactory 7.90.10 (Latest Stable Release)​(Versio Inventory)
+
+Key Features of Artifactory:
+1. Universal Artifact Management:
+2. Repository Types:
+    2.1 Local Repositories:
+    2.2 Proxy repositories or Remote Repositories: 
+    2.3 Virtual Repositories: Aggregate local and Proxy repositories under a single URL, simplifying access and management of artifacts
+3. Integration with CI/CD Tools:
+4. Version Control for Binaries:
+5. High Availability and Scalability:
+6. Build Information Integration:
+
+How to Configuring into Jenkins?
+
+Artifactory Side
+1. Create Deployer Credentials(Username and Password)
+2. Create Local Repository
+
+Jenkins Side
+1. Manage Jenkins -> Manage Plugins -> Go to Available -> Install Artifactory Plugins
+2. Manage Jenkins -> Configure System (Configure Server) -> Find JFrog -> Click on Add JFrog Platform Instances
+3. Instance id -> Add any Instance name. example(JFrog)
+4. JFrog Platform URL -> Add JFrog URL
+5. Click on Advanced Configuration
+    5.1 Add JFrog Artifactory URL. example(http://1.23.45.46:8082/artifactory)
+    5.2 Add JFrog Distribution URL. example(http://1.23.45.46:8082/distribution)
+6. Default Deployer Credentials
+    6.1 Add Username
+    6.2 Add Password
+7. Click on Save and Apply
+
+Jenkins Side
+1 Select -> Jenkins job
+2 Select -> Configure
+3 Select -> Build Environment -> Maven3-Artifactory Integration
+4 Artifactory Configuration
+    4.1 Artifactory Server
+        example: jfrog http://1.23.45.46:8082/artifactory
+    4.2 Choose Target Release Repository
+    4.3 Choose Target Snapshots Repository
+5. Click on Save and Apply

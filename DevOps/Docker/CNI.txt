@@ -1,0 +1,5 @@
+Container Network Interface (CNI)
+1. Network Interface specification for Kubernetes
+2. Assign a network namespace and a network interface to the Pod at startup
+3. Assign an IP address to a Pod
+4. Clean up the network namespace when the Pod terminates, frees up the IP address

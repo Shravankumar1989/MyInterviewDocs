@@ -1,0 +1,45 @@
+Here is the list of questions from the conversation:
+
+What is the difference between Git pull and pull request?
+
+How can you retrieve a file that was deleted from both local and remote after it was committed and pushed?
+
+If multiple developers commit changes directly into the production branch, leading to CI/CD failure and downtime, what steps would you take to resolve the issue and prevent it in the future?
+
+How would you restrict developers from committing changes directly to the production branch?
+
+Can you write Terraform code to create an EC2 instance? (Task requested to be demonstrated)
+
+How can you create an EC2 instance in a different region using the same resource without disturbing the existing state file?
+
+What will happen to your manual changes in AWS (e.g., security group modification) if you run terraform apply after making those changes?
+
+Why might pods go into a pending state in Kubernetes?
+
+If nodes run out of resources, what cost-effective solution would you provide to get the pods running?
+
+Can horizontal scaling be done on nodes, or is it only possible for pods in Kubernetes?
+
+What is the difference between vertical and horizontal scaling in Kubernetes?
+
+How do namespaces work in Kubernetes, and how can you restrict one team from accidentally deleting services in another team's namespace?
+
+How do you manage multi-tenant services and restrict access to AWS Secrets Manager so that only certain users or services can see specific secrets?
+
+What is the difference between a daemon set and a deployment in Kubernetes?
+
+What is the hub and spoke model in Argo CD?
+
+How can you define an application in Argo CD?
+
+What is the difference between sync and autosync in Argo CD?
+
+Have you worked with Helm charts in Argo CD? If so, how do you maintain them?
+
+What is an application set in Argo CD?
+
+How does synchronization work in Argo CD?
+
+What is your understanding of synchronization with respect to the state file in Argo CD?
+
+What are the roles and responsibilities in the project you’re hiring for?

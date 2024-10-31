@@ -1,0 +1,7 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Permissions and Ownership
+-------------------------
+    1. chmod <permissions> <filename>: Change file permissions.
+    2. chown <owner>:<group> <filename>: Change file ownership.
+    3. ls -l: List files with details including permissions and ownership.

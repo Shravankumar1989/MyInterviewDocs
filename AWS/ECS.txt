@@ -1,0 +1,96 @@
+What is AWS ECS?
+-----------------
+1. AWS Elastic Container Service (ECS) is a fully managed container orchestration service provided by Amazon Web Services.
+2. ECS allows you to run, stop, and manage Docker containers on a cluster of EC2 instances or with AWS Fargate, 
+    which is a serverless compute engine for containers.
+
+what is the process of AWS ECS?
+-------------------------------
+
+Step 1 - Create Cluster
+-----------------------
+1. Click on Create Cluster
+    1.1 Cluster name:
+        enter the cluster name - ex. MyCluster
+    1.2 Default NameSpace - optional
+        enter the NameSpace - ex. MyCluster
+2. Infrastructure
+    2.1 AWS Fargate(Serverless)
+    2.2 AWS EC2 instances
+
+    Select any one 
+    But I am Choosing AWS Fargate
+3. Click on Create
+
+Step 2 - Task Definition
+------------------------
+1. Click on Task Definition or Click on Create Task Definition
+    1.1 Task Definition Family
+        enter the Task Definition Family - ex. MyTaskDefinition
+2. Infrastructure Requirements
+    2.1 Launch Type
+        2.1.1 - AWS Fargate
+        2.1.2 Amazon EC2 Instances
+3. OS, Architecture, Network Mode
+    3.1 Operating System/Architecture
+        3.1.1 Choose Operating
+              Example - I am Choosing Linux/X86_64
+        3.1.2 Network Mode
+              AWSVPC
+    3.2 Task size
+        3.2.1 CPU
+              Choose CPU
+              Example - I am Choosing 1 vCPU
+        3.2.2 Memory
+              Choose Memory
+              Example - I am Choosing 3 GB
+    3.3 Task Role
+        Choose Role
+    3.4 Task Execution Role
+        Choose Task Execution Role
+        Example - ecsTaskExecutionRole
+4. Container
+    4.1 Name
+        enter the Name - ex. nginxc
+    4.2 Image URL
+         enter the Image URL - ex. Docker.Io or nginx:latest
+    4.3 Essential Container
+        Choose Essential Container
+        Example - I am Choosing Yes
+    4.4 Port Mapping
+        4.4.1 Container Port 
+              enter the Container Port  
+              Example 80
+        4.4.2 Protocol 
+                Choose Protocol
+                Example - TCP
+        4.4.3 Port name
+              enter the Port name
+        4.4.4 App Protocol
+               Choose App Protocol
+               Example - http
+    4.5 Resource Allocation
+        4.5.1 CPU
+              Choose CPU
+              Example - I am Choosing 1 vCPU
+        4.5.2 GPU
+              Choose GPU
+              Example - I am Choosing 1 GPU
+        4.5.3 Memory Hard Limit
+              Choose Memory Hard Limit
+              Example - I am Choosing 1 GB Hard Limit
+        4.5.4 Memory Soft Limit
+              Choose Memory Soft Limit
+              Example - I am Choosing 1 GB Soft Limit
+5 Storage
+    5.1 Amount
+        Enter the Amount 
+        Enter the Amount - 21 GB
+6. Click on Create
+
+Step 3 - Click Cluster - Example MyCluster
+----------------------------------------
+1. Click Cluster - Example MyCluster
+2. Create Service
+3. Choose LaunchType
+    example - Fargate

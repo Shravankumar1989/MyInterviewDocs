@@ -1,0 +1,9 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Firewall Management (UFW)
+-------------------------
+    1. ufw status: Check firewall status.
+    2. ufw enable: Enable firewall.
+    3. ufw disable: Disable firewall.
+    4. ufw allow <port>: Allow traffic on a specific port.
+    5. ufw deny <port>: Block traffic on a specific port.

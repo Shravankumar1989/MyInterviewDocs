@@ -1,0 +1,34 @@
+AWS EKS & Kubernetes:
+1.	Describe how you would set up a Kubernetes cluster from scratch on AWS EKS.
+    o	Follow-up: What considerations do you have for VPC design and availability zones?
+2.	How would you provision and manage node groups in AWS EKS?
+    o	Follow-up: Have you worked with Fargate, and how does it differ from managing node groups manually?
+3.	Walk me through the setup of an application in AWS EKS using an Ingress Controller and ALB.
+    o	Follow-up: How would you configure Route 53 with an Application Load Balancer (ALB) and integrate a Web Application Firewall (WAF)?
+Scaling and Auto-scaling:
+4.	What strategies have you used for scaling Kubernetes pods in a cluster?
+    o	Follow-up: Can you explain how Horizontal Pod Autoscaling (HPA) works and when it would be necessary to implement it?
+5.	How do you configure and manage auto-scaling of node groups in AWS EKS?
+    o	Follow-up: Have you worked with any other tools, such as Carpenter, for node auto-scaling?
+Infrastructure as Code (IaC):
+6.	How do you manage multiple environments (Dev, QA, Prod) in Terraform for infrastructure automation?
+    o	Follow-up: Can you describe how Terraform workspaces work in your current environment?
+7.	How would you integrate IAM roles and policies for EKS services and workloads in your setup?
+Argo CD & CI/CD:
+8.	How have you used Argo CD to manage deployments in AWS EKS?
+    o	Follow-up: Can you explain how Argo CD synchronizes your GitHub repository with your Kubernetes clusters?
+9.	What branching strategy have you implemented to ensure the right code is deployed to the correct environment using Argo CD?
+10.	What benefits do Helm charts offer in Kubernetes, and how have you used Helm in your deployment pipelines?
+    o	Follow-up: How do you perform rollbacks using Helm?
+Monitoring & Security:
+11.	What tools have you used for monitoring Kubernetes clusters?
+    o	Follow-up: What kind of metrics do you monitor in Prometheus and Grafana, and how does this data help you manage the health of the cluster?
+12.	How do you secure communication between AWS EKS and other AWS services like S3 or RDS?
+13.	What role does Network Policy and Role-Based Access Control (RBAC) play in your Kubernetes deployments?
+Miscellaneous & Concepts:
+14.	Have you worked with tools like Crossplane or Carpenter for infrastructure and Kubernetes management?
+    o	Follow-up: How would you handle a scenario if you were asked to integrate Carpenter or Crossplane in your environment?
+15.	Can you explain a scenario where you faced a scaling issue and how you resolved it using Kubernetes and EKS?
+16.	How does your experience with AWS Solution Architect certification help you in setting up and managing cloud-native applications?
+These questions cover a broad range of technical areas from the conversation and would allow you to gauge a candidate's depth of experience in AWS, Kubernetes, CI/CD pipelines, scaling, and IaC.
+

@@ -1,0 +1,101 @@
+what is Bitbucket?
+1. Bitbucket is a web-based version control repository hosting service owned by Atlassian.
+2. Latest Version: 9.1
+
+Key Features of Jenkins:
+1. Version Control:
+2. Collaboration:
+3. CI/CD Integration:
+4. Security:
+5. Integration with Atlassian Suite:
+6. Deployment and Automation:
+
+What are the Types of Bitbucket?
+1. Bitbucket Cloud: Bitbucket Cloud is a SaaS (Software as a Service) solution, hosted and managed by Atlassian on their servers.
+2. Bitbucket Data Center: Bitbucket Server is an on-premise solution, meaning it is hosted on your organization's own servers.
+3. Bitbucket Server: Bitbucket Data Center is designed for large organizations with high availability and performance needs.
+
+what is the major issue will face while configuration Bitbucket Software?
+1. Database Configuration Issues
+    1.1 Incorrect Database Configuration
+    1.2 Unsupported Database Versions
+    1.3 Database Permissions
+
+2. Java Configuration Issues
+    2.1 Incorrect Java Version
+    2.2 JAVA_HOME Configuration
+
+3. Network and Port Configuration
+    3.1 Port Conflicts
+    3.2 Firewall Issues
+
+4. Performance and Resource Issues
+    4.1 Insufficient Resources
+    4.2 Large Repositories
+
+5. Plugin and Integration Issues
+    5.1 Incompatible Plugins
+    5.3 Integration Failures
+
+what is the prerequisite for install Bitbucket software?
+1. Bitbucket Software requires the Oracle JDK or AdoptOpenJDK (now Eclipse Temurin) 11.
+2. 64-bit architecture: Jira requires a 64-bit operating system.
+3. Database Requirements
+
+
+How to optimize the Bitbucket application?
+1. System Resource Optimization
+2. Database Optimization
+3. Indexing and Search Optimization
+4. Scaling and High Availability
+5. Performance Monitoring and Alerts
+6. User and Repository Management
+7. Plugin Management
+8. Regular Maintenance
+
+How to Configuring Bitbucket webhooks to trigger automated Jenkins?
+1. Jenkins Side
+    1.1 Select -> Jenkins job
+    1.2 Select -> Configure
+    1.3 Choose Build Triggers -> Build when a changes is pushed to Bitbucket
+        override repository URL and paths
+        (Your repository URL)
+    1.4 Click on Save and apply
+
+2. In Bitbucket Side
+    2.1 Select your repository
+    2.2 go to - Settings
+    2.3 Select - webhook(in Left Side)
+    2.4 Add webhook
+    2.5 Add Payload URL - example(http://43.204.227.191:8080/bitbucket-hook/) or (Jenkins URL/bitbucket-hook/)
+    2.6 Status - Checked -> Active
+    2.7 SSL/TLS -> Skip the Verification
+    2.8 Event or Repository -> Checked -> Push
+    2.9 Click on Save
+
+Visual Workflow
+-------------------
+Feature branches (from develop) → Merge into develop
+Release branches (from develop) → Merge into master and develop
+Hotfix branches (from master) → Merge into master and develop
+
+
+
+
+Bugfix branches (from develop or release) → Merge into develop (and release, if applicable)
+
+
+Base image layer
+FROM adoptopenjdk/openjdk11:alpine-jre
+
+Environment variable layer
+ARG artifact=target/spring-boot-web.jar
+
+Working directory layer
+WORKDIR /opt/app
+
+Copying artifact layer
+COPY ${artifact} app.jar
+
+Execute command
+ENTRYPOINT ["java","-jar","app.jar"]

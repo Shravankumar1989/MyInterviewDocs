@@ -1,0 +1,105 @@
+So let the chat to come so we can start with your brief introduction. I think I will do some formalities by taking your picture with ID card, OK.
+30:15
+So I hope you have that government ID proof.
+30:24
+No, that's fine. Hi, Ravi. Uh, just hold it there.
+30:32
+Thank you.Thank you.Yeah. Yeah, it's good. It's good. OK, thanks. Thanks.
+30:37
+We can continue the discussion, Ravi. OK, thank you.
+30:44
+Hey Venkat, please start with brief introduction. Venkat quickly, one in one minute.
+31:51
+OK, good, great.
+31:56
+So uh, do you have any working experience on GCP?
+32:13
+OK. Azure and AWS only. OK. So do you have like any idea like how GCP works? What are the different services there in GCP? Any theoretical knowledge?
+32:24
+OK, no problem.
+32:33
+So let's come with the DevOps. So have you worked on the testing side of DevOps or CSTD pipeline?
+32:44
+Which approach you followed in your pipeline like?
+32:50
+Which testing approach you followed in your pipeline?
+33:53
+Mm-hmm.Mm-hmm.
+36:44
+OK.OK.
+37:12
+Oh OK, what? OK, so now the second question is what is the TDD and BDD?
+37:28
+Yeah.Yeah.Right.Right.
+38:34
+Ya.Ya.OK.OK.
+38:40
+How can you optimize test in CI?
+41:32
+Play.Play.
+41:40
+Mm-hmm.Mm-hmm.OK.OK.
+43:13
+Great. OK, so now.
+43:19
+We have working experience on a telephone.
+43:34
+OK, before one last question. In the from the DevOps side, suppose there is a like your organization is telling that have a policy to.
+43:51
+To restore to refresh the image on every 28 days, right Or secondly, So what would be your approach so that the emails whatever it will like the central team will release it will?
+43:55
+It will it will install on your all the applications server.
+43:59
+Uh, right, automatically.
+44:05
+So what you will do from the dev OPS point side?
+45:04
+So how you can control all these like these these codes from where?
+45:44
+OK, no, OK, that's fine. So now what is the terraform now coming to terraform like what is the terraform state file? What is the use of that and why it is important?
+48:47
+OK great. What is the difference between the terraforms local and remote backends?
+49:20
+OK.OK.OK fine. And how does Terraform handles the dependencies between modules?
+50:58
+OK. And what do you handle securities and sensitive data in data form?
+51:27
+How do you integrate with that hashicop?
+52:38
+OK, fine.OK, fine.OK, what is the difference between the declarative and imperative approach in infrastructure provisioning?
+53:23
+Telephone.Telephone.OK, fine.OK, fine.
+53:35
+OK, do you have any working hands on Python?
+53:57
+So using Python, you read that right.
+54:01
+OK, what is in it in Python?
+54:05
+What is in it? Yes.
+54:36
+What is the difference between array and list?
+55:21
+OK.OK.So what is slicing in Python?
+55:56
+Slicing.Slicing.OK and what is the doc is doing?
+56:03
+Doc string.Doc string.Doc Stringer.Doc Stringer.
+56:27
+What are the different scopes in Python?
+56:55
+Yeah.Yeah.OK.OK.
+57:25
+OK, cool 87, I'm done.
+57:32
+So I will share my feedback with HR.
+57:50
+I have asked any questions related to GCP.
+57:58
+Actually, so the requirement is that AWS and TCP right?
+58:39
+OK, good.OK, good.That's fine. OK. So I'm done with my interview. OK, Have a nice day. It was nice talking to you back. Great. Bye.
+29:21
+you can drop
+
+this is question asked by interviewer

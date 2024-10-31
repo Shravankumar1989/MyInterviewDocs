@@ -1,0 +1,67 @@
+employees - table:
+    id
+    name
+    department_id
+
+departments - table:
+    department_id
+    department_name
+
+
+#INSERT
+INSERT INTO employees (id, name, department_id, salary)
+VALUES
+(4, 'Dave', 20, 5500),
+(5, 'Eve', 10, 8000);
+
+#UPDATE
+UPDATE employees 
+SET salary = 60000 
+WHERE department = 'IT';
+
+#INNER JOIN
+SELECT employees.id, employees.name, departments.department_name
+FROM employees
+INNER JOIN departments 
+ON employees.department_id = departments.department_id
+
+#LEFT JOIN
+SELECT employees.id, employees.name, departments.department_name
+FROM employees
+LEFT JOIN departments 
+ON employees.department_id = departments.department_id
+
+#RIGHT JOIN
+SELECT employees.id, employees.name, departments.department_name
+FROM employees
+RIGHT JOIN departments 
+ON employees.department_id = departments.department_id
+
+#FULL OUTER JOIN
+SELECT employees.id, employees.name, departments.department_name
+FROM employees
+FULL OUTER JOIN employees 
+ON employees.department_id = departments.department_id
+
+#SECOND HIGHEST NUMBER
+SELECT salary 
+FROM employees 
+ORDER BY salary DESC 
+LIMIT 1 OFFSET 1
+
+#WHERE 
+SELECT * FROM employees 
+LEFT JOIN  departments 
+ON employees.department_id = departments.department_id
+WHERE departments.department_name = 'HR'
+
+#GROUP BY USE WITH AGGREGATE FUNCTION LIKE - COUNT(), SUM(), AVG(), MAX(), or MIN()
+SELECT department_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department_id;
+
+#GROUP BY WITH HAVING
+SELECT department_id, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department_id
+HAVING SUM(salary) > 12000;

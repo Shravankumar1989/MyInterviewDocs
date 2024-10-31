@@ -1,0 +1,20 @@
+git-revert-and-git-reset
+
+Git Reset
+---------
+1. Reset removes commit from histroy
+2. Reset works only for local commits
+
+commands
+--------
+
+git reset --mixed <commitId> - removes commit and keeps changes in working area
+
+git reset --soft <commitId> - keeps changes in staging area
+
+git reset --hard <commitId> - discard the changes
+
+Git Revert
+---------
+1. Revert will not modify commit history
+2. Revert will work both for local and remotes commits

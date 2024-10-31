@@ -1,0 +1,12 @@
+Ansible Project Structure
+
+Ansible
+    1. inventory
+        1.1 vm-setup-playbook
+            1.1.1 hosts
+    2. roles
+        2.1 python
+            2.1.1 task
+                2.1.1.1 main.yml
+    3. README.md 
+    4. vm-setup-playbook.yml

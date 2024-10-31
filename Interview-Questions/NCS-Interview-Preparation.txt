@@ -1,0 +1,245 @@
+https://chatgpt.com/c/67177cdc-738c-800e-97c8-1192c80b2e37
+
+1.  ReplicaSet
+
+2.  Deployment
+
+3.  Namespace
+    3.1 kubectl config set-context --current --namespace=<namespace>
+        example: kubectl config set-context --current --namespace=dev
+
+4.  Resource Quota - This for Namespace Level(Entire Namespace)
+
+5.  Resource - Limits and Requests (Pod/Container Level)
+
+6.  Service - CLusterIp, NodePort, LoadBalancer
+
+7.  Labels and Selectors With Kubernetes
+    7.1 kubectl label nodes <node-name> disktype=ssd
+        example: kubectl label nodes node1 disktype=ssd
+
+8.  Taints and Toleration in Kubernetes
+    8.1 - Create
+        kubectl taint nodes <node-name> key=value:<effects>
+        example: kubectl taint nodes node1 dedicated=database:NoSchedule
+
+    8.2 Types of effects
+        8.2.1   NoSchedule
+        8.2.2   PreferNoSchedule
+        8.2.3   NoExecute
+    
+    8.1 - Delete
+        kubectl taint nodes <node-name> key=value:<effects>-
+        example: kubectl taint nodes node1 environment=production:NoSchedule-
+
+9.  Static Pods in Kubernetes
+    9.1 - Create
+        9.1.1   Create a YAML Manifest for the Pod
+                nginx-static-pod.yaml
+        9.1.2   Place the YAML File in the Static Pod Directory
+                /etc/kubernetes/manifests/
+                CMD - mv nginx-static-pod.yaml /etc/kubernetes/manifests/
+        9.1.3   Verify the Static Pod is Running
+                kubectl get pods -n kube-system
+        
+        9.1.4   Check Logs or Describe the Pod
+                kubectl logs nginx-static-pod -n kube-system
+                kubectl describe pod nginx-static-pod -n kube-system
+        
+        9.1.5   How to Delete a Static Pod
+                rm /etc/kubernetes/manifests/nginx-static-pod.yaml
+
+10. Rollback Deployment
+    10.1    Check the rollout history
+            kubectl rollout history deployment webapp
+
+    10.2    Rollback to a Specific Revision (Optional)
+            kubectl rollout undo deployment webapp --to-revision=1
+
+11. ConfigMap
+    Reference:- https://chatgpt.com/c/671747b1-74a0-800e-b2a8-a19189d842ec
+
+    11.1    Create a ConfigMap using Literal Values
+
+            kubectl create configmap my-config \ 
+            --from-literal=APP_ENV=production \
+            --from-literal=API_URL=https://api.example.com
+    
+    11.2    From a Configuration File
+            
+            Create a file named config.txt:
+                APP_ENV=production
+                API_URL=https://api.example.com
+            
+            Then create the ConfigMap:
+                kubectl create configmap my-config --from-file=config.txt
+
+    11.3    Creating a ConfigMap
+            
+            configmap.yaml
+
+            apiVersion: v1
+            kind: ConfigMap
+            metadata:
+              name: my-configmap
+            data:
+              DATABASE_URL: "jdbc:mysql://localhost:3306/mydb"
+              APP_ENV: "production"
+              LOG_LEVEL: "INFO"
+    
+    11.3    Using ConfigMap in a Pod
+
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: my-configmap
+                  key: DATABASE_URL
+
+            - name: APP_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: my-configmap
+                  key: APP_ENV
+
+12. Secret
+    Reference:- https://chatgpt.com/c/671747b1-74a0-800e-b2a8-a19189d842ec
+
+    11.1    Creating a ConfigMap
+            
+            secret.yaml
+
+            apiVersion: v1
+            kind: Secret
+            metadata:
+              name: my-secret
+            type: Opaque
+            data:
+              username: YWRtaW4=     # base64-encoded "admin"
+              password: MWYyZDFlMmU2N2Rm  # base64-encoded "1f2d1e2e67df"
+    
+    11.3    Using ConfigMap in a Pod
+        
+            - name: USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: username
+
+            - name: PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: password
+
+13. Ingress
+    1.  Why Use Ingress?
+        1.2  Path-Based Routing: 
+            Route traffic based on URL paths (e.g., /app1 to Service A, /app2 to Service B).
+
+        1.2 Host-Based Routing: 
+            Route traffic based on hostnames (e.g., app1.example.com to Service A).
+
+        1.3 Load Balancing: 
+            Distribute traffic across multiple instances of your service.
+    
+    2.  How Ingress Works
+        2.1 Ingress Controller:
+            A controller is responsible for interpreting and enforcing the rules defined in the Ingress object.
+
+        2.2 Ingress Rules:
+            These define how traffic should be routed based on hostnames or paths.
+        
+        2.3 Backend Services:
+            Ingress routes incoming traffic to backend Kubernetes services.
+
+14. PV and PVC
+    14.1 -  persistentVolumeReclaimPolicy
+            14.1.1.  Retain - Keeps the data on the volume after PVC deletion.
+            14.1.2.  Delete - Automatically deletes the storage resource (e.g., cloud volume).
+            14.1.3.  Recycle - Clears the volume’s content and makes it available for reuse. (Deprecated)
+
+15. Role, RoleBinding, ClusterRole & ClusterRoleBinding in Kubernetes
+
+    15.1 -  Role in Kubernetes:
+            A Role defines a set of permissions within a specific namespace
+
+            Note: Grant read-only access to pods in the default namespace.
+
+            apiVersion: rbac.authorization.k8s.io/v1
+            kind: Role
+            metadata:
+              namespace: default  # This role applies only within the 'default' namespace
+              name: pod-reader
+            rules:
+            - apiGroups: [""]
+              resources: ["pods"]
+              verbs: ["get", "list", "watch"]  # Allow reading pods
+
+    15.2 -  RoleBinding in Kubernetes
+            A RoleBinding assigns a Role to a user, group, or service account within a namespace.
+
+            NOte: Grant read-only pod access to the user jane in the default namespace.
+
+            apiVersion: rbac.authorization.k8s.io/v1
+            kind: RoleBinding
+            metadata:
+              name: pod-reader-binding
+              namespace: default  # Binding applies within the 'default' namespace
+            subjects:
+            - kind: User
+              name: jane  # The user to whom the Role is assigned
+              apiGroup: rbac.authorization.k8s.io
+            roleRef:
+              kind: Role
+              name: pod-reader  # Reference the 'pod-reader' Role
+              apiGroup: rbac.authorization.k8s.io
+    
+    15.3 -  ClusterRole in Kubernetes
+            A ClusterRole is similar to a Role, but it applies cluster-wide or to non-namespaced resources
+            (e.g., nodes, persistent volumes). 
+            It can also be used within individual namespaces if needed.
+
+            NOte: Grant cluster-wide access to both pods and nodes.
+
+            apiVersion: rbac.authorization.k8s.io/v1
+            kind: ClusterRole
+            metadata:
+              name: cluster-admin-role
+            rules:
+            - apiGroups: [""]
+              resources: ["pods", "nodes"]
+              verbs: ["get", "list", "watch", "delete"]  # Full access to pods and nodes
+    
+    15.4 -  ClusterRoleBinding in Kubernetes
+            A ClusterRoleBinding assigns a ClusterRole to a user, group, or service account across the entire cluster. 
+            This binding applies globally, across all namespaces.
+
+            NOte: Grant cluster-wide administrative access to the admin user.
+
+            apiVersion: rbac.authorization.k8s.io/v1
+            kind: ClusterRoleBinding
+            metadata:
+              name: cluster-admin-binding
+            subjects:
+            - kind: User
+              name: admin  # Assign ClusterRole to 'admin' user
+              apiGroup: rbac.authorization.k8s.io
+            roleRef:
+              kind: ClusterRole
+              name: cluster-admin-role  # Reference the 'cluster-admin-role'
+              apiGroup: rbac.authorization.k8s.io
+
+16. Probes in Kubernetes
+
+    16.1 -  Readiness Probe
+            16.1.1 -    Checks if the container is ready to accept traffic.
+            16.1.1 -    If the probe fails, the container is removed from the service’s endpoints, 
+                        so it won't receive traffic.
+
+    16.2 -  Liveness Probe
+            16.2.1 -    Checks if the container is alive and running.
+            16.2.1 -    If the probe fails, Kubernetes restarts the container.
+
+    16.3 -  Startup Probe
+            16.3.1 -    Checks if the container has started successfully.
+            16.3.1 -    Useful for slow-starting applications to prevent unnecessary restarts.

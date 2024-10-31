@@ -1,0 +1,40 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Cron Jobs (Task Scheduling)
+---------------------------
+    1. crontab -e: Edit the cron table.
+    2. crontab -l: List cron jobs.
+
+For example, if you want to run a script every day at 2:30 AM, you can add this line:
+------------------------------------------------------------------------------------
+30 2 * * * /path/to/your/script.sh
+
+* * * * * command_to_run
+-------------------------
+Minute (0 - 59)
+Hour (0 - 23)
+Day of the month (1 - 31)
+Month (1 - 12)
+Day of the week (0 - 7, where both 0 and 7 represent Sunday)
+
+
+Minute (0 - 59)
+Hour (0 - 23)
+Day (1 - 31)
+Month (1 - 12)
+week (0 - 7, where both 0 and 7 represent Sunday)
+
+
+For example, if you want to run a script every Friday at 10:00 PM , you can add this line:
+------------------------------------------------------------------------------------
+0 22 * * 5 /path/to/your/script.sh
+
+Explanation of the fields:
+----------------------------
+0: The minute field (0th minute of the hour)
+22: The hour field (22nd hour, or 10 PM in 24-hour format)
+*: Every day of the month
+*: Every month
+5: Friday (as days of the week are numbered 0-6, with 5 representing Friday)
+
+This cron job will execute the script at /path/to/your/script.sh every Friday at 10:00 PM.

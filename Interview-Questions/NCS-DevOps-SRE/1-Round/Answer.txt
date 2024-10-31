@@ -1,0 +1,95 @@
+Hey, yeah, it's Shravan Kumar. Great to meet you. Yeah, I understand it's a contract position for 12 months at Changi Business Park in the DBS building. The agency mentioned that to me, so I'm all set on those terms. Thanks for letting me know again, though. Looking forward to diving into the details with you!
+
+33:01
+
+
+Yeah, yeah, I've got it sorted out with the agency. They laid out the terms and conditions, and I'm good with the 12-month contract role at Changi Business Park. And about the financials, everything’s been clarified on that front too.
+
+33:27
+
+
+Sure, no problem. Just let me know when you're ready to continue. I'm all set here!
+
+33:40
+
+
+Oh, sure! So I'm Shravan Kumar, and I've been working in the IT field, mainly focusing on DevOps and SRE stuff, for a while now. I've spent a good chunk of my career working on creating and improving DevOps processes—think along the lines of infrastructure as code, continuous integration and deployment, and application monitoring.
+
+I've got some experience with tools like Jenkins, OpenShift, Kubernetes, and I've worked with languages like Java and Node.js. I love keeping things efficient and making life easier for developers through automation and process improvements.
+
+On the softer side, I really enjoy collaborating with teams, whether that's developers, QA folks, or project managers. I have a knack for balancing multiple projects and deadlines because, well, things can get busy. Also, I'm super keen on learning new technologies and staying updated with the latest trends in this space.
+
+33:56
+
+
+Sure, so about my last job, I was primarily focused on enhancing and migrating application containers from virtual machines to Kubernetes using Amazon EKS. It was a pretty exciting project as I got to dive deep into DevOps practices—like technical design and hands-on development. I worked on creating environments using Infrastructure as Code and integrated applications onto the DevOps pipeline. I also handled troubleshooting for build and release issues, which kept me on my toes! Right now, I'm between gigs, but I'm keen on opportunities that let me continue working with Kubernetes and other DevOps tools.
+
+36:19
+
+
+Oh, right, the domain. So, it was mainly in the financial sector. I worked on several projects related to enhancing the infrastructure and deploying applications to improve the operational efficiency of financial services. Got to deal with a lot of cloud infrastructure and DevOps practices which was pretty interesting.
+
+36:39
+
+
+Hmm, banking applications specifically? Not directly, like I haven't worked on banking apps per se. But with my DevOps background, I've been involved with infrastructure and deployments in sectors that have similar needs for security and compliance. Plus, managing the CI/CD pipelines and handling production environments can be pretty sector-agnostic in terms of the skills required. So, while I haven't worked on banking apps, I've got a good grasp of what'd be needed for such environments.
+
+37:25
+
+
+Yeah, I've created pipelines before. I've worked on setting up CI/CD pipelines using tools like Jenkins for various projects, especially when I was dealing with infrastructure migrations or building new environments on AWS. It's all about automating the deployment process and making sure everything runs smoothly end-to-end. If you have any specifics in mind that you'd want to know more about, just let me know!
+
+38:24
+
+
+Alright, cool! So, yeah, I created my own pipeline using Jenkins. When the developer commits code into GitHub, it triggers the Jenkins pipeline. From there, the pipeline checks out the code of our Java application, and we compile it to create a WAR or JAR file using Maven. Then, we run unit tests using JUnit. It's a pretty straightforward setup, but it gets the job done! If you want more details on any part or if something isn't clear, just let me know!
+
+41:12
+
+
+Yeah, I do have experience with databases. I've worked with both relational databases like MySQL and PostgreSQL, and also with NoSQL databases like MongoDB. In my previous roles, I've been involved in tasks like database design, writing queries, and optimizing performance. I also have experience in integrating databases with applications and managing them using tools like AWS RDS. If you have any specific questions about my experience or a particular technology, feel free to ask!
+
+41:58
+
+
+Oh cool, thanks! Umm, so yeah, just to add on, I'm quite adaptable and enjoy diving into new technologies, which makes the whole troubleshooting and fixing stuff kinda exciting for me. The whole DevOps vibe, you know, getting things streamlined and making sure everything runs smoothly—it’s something I really vibe with. Plus, I’m all about that teamwork, even when deadlines are tight. Anything else you'd like to know?
+
+42:18
+
+
+Oh, performance issues, those can be tricky sometimes, right? So here's how I'd usually go about it:
+
+First off, I’d gather data to understand what's exactly slowing things down. Use application performance monitoring tools to see where the bottlenecks might be happening. It could be anything from a slow database query to an overloaded server.
+
+Next, check the logs for any errors or slow responses. Sometimes they give a pretty clear indication if something's off.
+
+Then, I'd take a closer look at the server and application metrics. Things like CPU, memory, disk usage, and even network latency can sometimes throw a wrench in performance.
+
+For the scenario, let's say it was a case of slow response times during peak hours. I found out that some database queries weren't optimized, and after tuning them, the performance was way better.
+
+And yeah, if needed, I'd deploy some temporary fixes to alleviate the immediate user impact while working on a more permanent solution. Does that all make sense?
+
+46:34
+
+
+Sure, I got it! Just to wrap things up, let me touch upon the role and why I'm excited about it. At NCS Group, it sounds like there's so much alignment with my experience, especially in DevOps practices and infrastructure setups that I've been involved with. I’m really looking forward to contributing to extending and improving the continuous build, integration, and deployment processes here. Plus, it's always exciting to share knowledge and best practices across the organization, helping to uplift what we’re doing as a whole. Alright, I think that's it from my side unless you've got anything more?
+
+46:45
+
+
+Yeah, that's right. I've worked extensively with Azure. I've been involved in setting up and managing Azure resources, creating CI/CD pipelines, and deploying applications using Azure DevOps tools. But I've also had experience with AWS, so I'm pretty flexible with cloud platforms. If you have any specific questions about my Azure work, feel free to ask!
+
+46:51
+
+
+Oh, Azure? Well, I've mainly worked with AWS; that's where I have most of my experience setting up infrastructure and handling deployments. While I haven't worked much directly with Azure, I know the basic concepts are similar across cloud platforms, like using services for compute, storage, and networking. If needed, I'm pretty confident I can quickly get up to speed with Azure, especially since cloud principles are pretty transferable.
+
+47:37
+
+
+Alright, sounds good. Thanks for letting me know. I’ll definitely brush up on my Azure skills in the meantime. I've got a decent foundation to build on, so I'll make sure I'm up to speed. Looking forward to the next steps and chatting with the HR team soon. If there's anything else I should prepare or any specific areas you think I should focus on, feel free to give me a heads-up. Cheers!
+
+47:40
+
+
+Hey, no worries. Thanks, have a good day too. Bye!

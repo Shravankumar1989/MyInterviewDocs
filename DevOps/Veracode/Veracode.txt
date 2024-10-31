@@ -1,0 +1,40 @@
+Reference URL: https://www.devopsschool.com/blog/what-is-veracode-and-use-cases-of-veracode/
+
+1.  What is Veracode?
+---------------------
+    1.1 Veracode is a cloud-based application security platform that helps organizations secure their software by identifying, 
+        fixing, and preventing security vulnerabilities in applications. 
+    
+    1.2 It provides automated tools to scan source code, binaries, and web applications for potential security risks. 
+    
+    1.3 Veracode is widely used for 
+        1.3.1 Static Application Security Testing (SAST), 
+        1.3.2 Dynamic Application Security Testing (DAST), and 
+        1.3.3 Software Composition Analysis (SCA).
+
+2.  what are the Key features of Veracode include:
+--------------------------------------------------
+    2.1 Static Application Security Testing (SAST): 
+        Veracode analyzes an application's source code or binaries without executing them. 
+        It identifies coding issues like insecure code patterns, SQL injection, cross-site scripting (XSS), and other vulnerabilities early
+        in the development process.
+
+    2.2 Dynamic Application Security Testing (DAST): 
+        Veracode performs black-box testing on running applications, simulating attacks and scanning for security vulnerabilities 
+        such as authentication flaws or insecure configurations.
+
+    2.3 Software Composition Analysis (SCA): 
+        Veracode detects vulnerabilities in open-source libraries and third-party components that an application relies on, 
+        helping developers ensure their dependencies are secure.
+
+    2.4 Integration with CI/CD Pipelines: 
+        Veracode can be integrated into continuous integration (CI) and continuous delivery (CD) pipelines, 
+        allowing security checks to be automated during the development process.
+
+    2.5 Compliance Reporting: 
+        Veracode provides detailed security reports and metrics, helping organizations meet regulatory compliance requirements 
+        and maintain secure software development practices.
+
+    Veracode is often used by development teams to ensure their applications are secure from development to deployment, 
+    enabling secure DevOps practices (DevSecOps). It is popular among businesses looking to enhance their software security 
+    posture without relying on purely manual code reviews or tests.

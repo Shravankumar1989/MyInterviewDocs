@@ -1,0 +1,6 @@
+Reference - https://chatgpt.com/c/66ed43fc-dc38-800e-8cd1-d86898dc95fd
+
+Archiving and Backups
+---------------------
+    1. tar -czvf <archive_name>.tar.gz <directory>: Compress a directory.
+    2. tar -xzvf <archive_name>.tar.gz: Extract a compressed archive.

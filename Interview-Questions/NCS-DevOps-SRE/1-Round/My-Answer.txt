@@ -1,0 +1,124 @@
+31:11
+Play.Play.
+32:25
+Yeh hai afrofel.
+32:30
+Hi, it's yeah, yeah, yeah, yeah. Sawan Kumar.
+33:01
+OK, so Shravan, before we proceed, I wanted to tell you, I hope the agency already had words with you regarding the terms and conditions. Yeah. And to say this is the contract position for the 12 months and the job location is the, the Changi business called DBS building. Yeah. And, and, and second thing is that, uh, and about the financial, I hope you cleared with the agency, right? Yeah, Yeah, I'm aware of, I'm aware of that. OK.
+33:10
+Singapore equipment they hired at the contact to a higher position only only. So I'm aware of that. OK, so no need to worry.
+33:21
+I am audible, right?
+33:23
+OK, no problem.
+33:35
+OK, so can you please tell me about yourself and.
+33:40
+About your last job, currently you are not working right. Yes, yeah.
+33:51
+The project what you involved?
+34:03
+Myself Travan Kumar Patil, I have overall experience in the 8 years of treatment and relevant experience needed about engineering is the five flex years of experience and remaining experience.
+34:22
+A senior full stack developer in that I have experience with the tools and technologies like a drinking Kubernetes, docker, inchable, terraform, shift and also I experienced the Atlantean to like dira confluent bit bucket.
+34:38
+And Encibel and also I have a good experience with in from in front of along with the application of in infrared basically defined as CICD pipeline using the denking and deploying into the Kubernetes cluster using the RCD.
+35:03
+And also I have defined that a double infrastructure into the AWS within the terraform and also I experience with application of satellite. Basically I define that providing the permission to creating the IML IAM role and also creating the repository in the bit bucket and also working with a couple of.
+35:17
+They will assign that decision to the Zira. I need to solve those distributed prioritize and also I help for production support and that nail art companies.
+35:43
+Roads and responsibilities basically I will working with that like data works engineer like role Thunder print. Basically I define that managing the TI TD power plant and observability of the application how it is working and monitoring that alerting that along with that have held for that like.
+35:46
+Change management to take into the.
+35:51
+Like production level this kind of rules and adjustment will try to do that and along with that.
+36:11
+In in below 2 junior there I will assign the task to what exactly needs to be done that so when they check into the task I will help from them to get it complete that task. So basically this is roles and responsibility along with that my description.
+36:18
+At developed engineer.
+36:28
+Basically I will most of the most of the times I will use that observability is OK. So both things I also handle that OK.
+36:59
+Yes, banking application, I had nearly five years of experience that is the UOB bank that is five month duration only that project basically aw we need to actually that I work as a developer engineer into that UAB bank. So that is project duration with the five months only. So for that.
+37:03
+I that project is the on premises I taken into the.
+37:13
+AWS infrastructure this is the I have done that into that that organization. Okay.
+37:35
+Have you created any own pipeline? Yes, I have created that own pipeline within the Jenkins file itself. Can I explain that what exactly I implemented that last organization? Actually the when developer commit code into the guitar propagate right after that.
+37:47
+GitHub trigger the drinking pipeline. OK, so after that when trigger the drinking pipeline, right, we are doing the fact Peter, basically we are.
+37:57
+Check out the code. OK this is Java application product. OK so we are taking the code and also we are.
+38:12
+Creating the Ware or jar file that is a maven clean install. Basically it will create a wire or tar file based on that form XTML file. After that we are doing the unit testing. J unit testing that you think the maven tool itself only.
+38:29
+Maven tech. Basically it will do the unit touching. After that we are using the static code analysis within the. Basically we are checking all the information like any duplicate, any.
+38:44
+Information exposing it all about that code we are checking and along with that we are checking the code coverages basically code coverage we are maintained that maintained that our code coverage more than 85% then.
+39:07
+Only we will take into the another process, OK, so for that we will we have implemented that one more is the quality gate. Basically it will provide that status whether code coverage has done or not. Okay, so if quality gate provided true after that you taking it another process otherwise we are aborting the pipeline and.
+39:19
+That after that when they fail the pipeline, right, we are sending the notification to the teams, OK, So this we have done that. So once that pipeline.
+39:36
+Like quality gate provided that right after that we are storing that wire or jar file into the jfrag artifactory. So once this is then right we are creating the wire like docker file we have written that docker file.
+40:07
+In the docker file within the docker build command docker build manage T and image name and dot it will create that images. So after that once image has been created right we need to check that any base image have vulnerability there or not OK so based on that we will using that tools like HTL app scan. Using that HTL app scan basically we are checking that any code whereabout is there or not. Once everything is done right that.
+40:36
+Touring the private registry, that is our organization was using the Docker itself only they are using the Azure private trajectory. After that, that image has put into the private register, right. We have another guitar propagatory that Gita propagatory. We are updating that image name in that manufacture. So for that we are using that git of tools like Aro 3D we are integrated with.
+40:42
+Gita property with ARC it is always look into that many any other name.
+41:01
+You made them had updated or not. If get a new image is right, it will pull the image, it will take the image name and they will pull it from that docker registry and it will deploy into the Kubernetes cluster. This entire structure I implemented that there.
+41:31
+OK, sounds good. Yeah, OK. Do you have any experience with the the database? Yes, I have experienced the RDH MySQL. I use that to creating the database, migrating the databases and creating the endpoint for that like username, password. I need to do the endpoint at the developer has to communicate with that drive. So that's written I created that along with that I migrated also.
+41:50
+And all the details I given to the developers developer, they will assign the they will do that configuration, database configuration level. So after that they can able to do that credit operation using the deleting, reading whatever they want. They can do that OK.
+42:01
+Yeah.Yeah.Mm-hmm.Mm-hmm.
+42:31
+Sure. Basically fact of all actually may I know where we deployed that application actually that that scenario will be if you deployed into the server side or like any cloud side. So I can tell that example I will give that basically what are the scenarios will be there.
+42:57
+Suppose our application is deployed into the AWS right? Suppose might be our website is not loading the proper way. So for that what we do exactly for that cloud front basically cloud front we can able to use that. Basically it can tell that CDN content delivery network within the cloud.
+43:03
+You can able to cloud front. Basically it is an you can tell that at the location.
+43:26
+Every country have the nearest by at the location, OK, when you visit the website, that particular website right? It will store the khaki into the nearest edge location, OK, the same person can come to that website, right? You can get the website is very fast because that already that information has stored in the.
+43:53
+At the location, right. So your website performance might be very good. This is one scenario. One more thing because of that code optimization also we have not done as of expected. If your example I will give that if you are within that more in the in the course that basically most of the times you can use the more you have not done that.
+43:58
+That much as per the optimization like using the number of for each loop.
+44:08
+So we need to do the code optimize along with that some of the time.
+44:37
+While creating the database we try to fetch in the databases right? We return the number of joints with the number of tables and also we not implemented that database with index. If you using index and code is your database is very optimized right you can get the data is very fast way. So this is one scenario code optimization, database optimization. In database optimization we need to do that.
+45:05
+Maintain that tour procedure. Along with that, try to reduce the using the joint command. Along with that, you can meet with that index. Uh, OK, And this is database level and code level. We need to optimize the code side. And sometime I also fake that when you using the large size of images right that time also you can.
+45:10
+Trouble that load the website so because that it it.
+45:36
+Try to download the image ties right, that is one this is all our possibilities are our website is going to go very low at performance. OK and you are telling that how you like how you finding that this kind of I face the situation like into the current previous organization only.
+45:42
+Basically user search the data right while searching the data.
+46:07
+Our application taking lot of time to get the details. So when I visited into that the interest application right I can see there for query it will showing in the red because the query is not that much optimized. After that I checked with the team because of that query we are getting the we tried to.
+46:15
+Fix all the disease so after that when they done the optimize the code and databases after that our website is very.
+46:22
+Getting the fastest way, this kind of situation we have, is that OK?
+46:30
+OK, OK. Sounds good.
+46:45
+OK. So basically you work on majorly Azure platform, right? No, no, no AW platform. OK, OK. And what about?
+47:01
+Azure recently started working on that last organization only I worked on that Azure nearly I have one year of experience on that Azure. So most of that my career has been started into the AW.
+47:14
+Cloud itself only. So yeah, I'm happy to, if I get that opportunity to work on that Azure, definitely I will be willing to learn and to grow up on that task.
+47:17
+Yeah. OK, Shravan, I'm going to forward your.
+47:32
+OK, OK.OK, OK.OK. So meanwhile you just do the preparation on the Azure? Sure, definitely.
+47:38
+Yeah, yeah. Understood. OK, sure. Thank you for have a good day. Bye, bye. Bye. Bye.
