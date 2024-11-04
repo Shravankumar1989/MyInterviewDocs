@@ -144,3 +144,33 @@ Common causes include:
         ```bash
         htop
         ```
+
+
+# Kubernetes Deployment Rollout History and Rollback
+
+Assuming you have a deployment named `my-app` and want to view its rollout history, use the following command:
+
+```sh
+kubectl rollout history deployment/my-app
+```
+
+This command might display an output similar to:
+
+```
+REVISION  CHANGE-CAUSE
+1         Initial deploy
+2         kubectl set image deployment/my-app my-app=nginx:1.16
+3         kubectl set image deployment/my-app my-app=nginx:1.17
+```
+
+To view the details of a specific revision, such as revision 2, you can use:
+
+```sh
+kubectl rollout history deployment/my-app --revision=2
+```
+
+If necessary, you can roll back to a specific revision, for instance, to revision 2, with the following command:
+
+```sh
+kubectl rollout undo deployment/my-app --to-revision=2
+```
